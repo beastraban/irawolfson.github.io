@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +31,30 @@
     
     <main class="main-content">
       <article class="page-content">
+        <style>
+          @keyframes sunburstGlow {
+            0%, 100% { 
+              filter: drop-shadow(0 0 8px rgba(255, 150, 50, 0.4));
+              transform: scale(1);
+            }
+            50% { 
+              filter: drop-shadow(0 0 20px rgba(255, 150, 50, 0.7)) drop-shadow(0 0 40px rgba(255, 100, 50, 0.3));
+              transform: scale(1.02);
+            }
+          }
+          .sunburst-logo-animated {
+            animation: sunburstGlow 3s ease-in-out infinite;
+          }
+          .logo-light { display: block; }
+          .logo-dark { display: none; }
+          @media (prefers-color-scheme: dark) {
+            .logo-light { display: none; }
+            .logo-dark { display: block; }
+          }
+        </style>
         <div class="sunburst-header">
-          <img src="assets/images/sunburst-logo.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator">
+          <img src="assets/images/sunburst-logo-cropped.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator" class="sunburst-logo-animated logo-light">
+          <img src="assets/images/sunburst-logo-dark.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator" class="sunburst-logo-animated logo-dark">
         </div>
 
         <p>SunBURST achieves <strong>O(d<sup>0.67</sup>) scaling</strong> through 512+ dimensions—a breakthrough in computational Bayesian inference that enables model comparison problems previously considered intractable.</p>
