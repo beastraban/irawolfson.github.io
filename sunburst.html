@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunBURST - GPU-Accelerated Bayesian Evidence</title>
+  <meta name="description" content="SunBURST: GPU-native Bayesian evidence calculator with O(d^0.67) dimensional scaling.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="index.html" class="site-title">Ira Wolfson</a>
+        <ul class="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="sunburst.html" class="active">SunBURST</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      <article class="page-content">
+        <div class="sunburst-header">
+          <img src="assets/images/sunburst-logo.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator">
+        </div>
+
+        <p>SunBURST achieves <strong>O(d<sup>0.67</sup>) scaling</strong> through 512+ dimensions—a breakthrough in computational Bayesian inference that enables model comparison problems previously considered intractable.</p>
+
+        <h2>What It Does</h2>
+        <p>Bayesian model comparison requires computing the <em>evidence</em> (marginal likelihood) for competing models. This integral over parameter space is notoriously difficult to calculate in high dimensions. SunBURST exploits GPU parallelism to make this tractable for real-world problems.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Dimensional scaling</strong>: O(d<sup>0.67</sup>) tested through 512 dimensions</li>
+          <li><strong>GPU acceleration</strong>: CUDA-based parallel computation</li>
+          <li><strong>Local execution</strong>: Runs on your hardware, using your GPUs</li>
+          <li><strong>Python interface</strong>: Clean API for integration with existing workflows</li>
+          <li><strong>Machine precision</strong>: Validated against analytical solutions for Gaussian posteriors</li>
+        </ul>
+
+        <h2>Performance</h2>
+        <p>Benchmarked against established nested sampling tools (dynesty, ultranest, nautilus), SunBURST demonstrates 245× speedup at 32 dimensions for Gaussian posteriors while maintaining machine precision accuracy.</p>
+
+        <h2>Architecture</h2>
+        <p>SunBURST runs locally on your machine. The interface connects to a local server, keeping all computation on your infrastructure:</p>
+        <ol>
+          <li>Install SunBURST package (Python + CUDA)</li>
+          <li>Launch local server</li>
+          <li>Define models, run evidence calculations, visualize results</li>
+        </ol>
+        <p>This architecture means zero cloud costs and complete control over your data.</p>
+
+        <div class="download-section">
+          <h3>Get SunBURST</h3>
+          <p>SunBURST is under active development. Leave your information to be notified when it's available for download.</p>
+          <p style="margin-top: 1rem;">
+            <a href="contact.html" class="btn">Contact for Access</a>
+          </p>
+        </div>
+
+        <h2>Citation</h2>
+        <pre><code>@software{wolfson_sunburst,
+  author = {Wolfson, Ira},
+  title = {SunBURST: GPU-Accelerated Bayesian Evidence Calculator},
+  year = {2026},
+  url = {https://irawolfson.com/sunburst}
+}</code></pre>
+      </article>
+    </main>
+    
+    <footer class="site-footer">
+      <p>&copy; 2026 Ira Wolfson</p>
+    </footer>
+  </div>
+</body>
+</html>
