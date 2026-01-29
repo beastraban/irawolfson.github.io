@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SunBURST - GPU-Accelerated Bayesian Evidence</title>
-  <meta name="description" content="SunBURST: GPU-native Bayesian evidence calculator with O(d^0.67) dimensional scaling.">
+  <title>SunBURST - Ira Wolfson</title>
+  <meta name="description" content="SunBURST: GPU-accelerated Bayesian evidence calculation achieving machine-precision accuracy through 1024 dimensions.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,73 +30,123 @@
     
     <main class="main-content">
       <article class="page-content">
-        <style>
-          @keyframes sunburstGlow {
-            0%, 100% { 
-              filter: drop-shadow(0 0 8px rgba(255, 150, 50, 0.4));
-              transform: scale(1);
-            }
-            50% { 
-              filter: drop-shadow(0 0 20px rgba(255, 150, 50, 0.7)) drop-shadow(0 0 40px rgba(255, 100, 50, 0.3));
-              transform: scale(1.02);
-            }
-          }
-          .sunburst-logo-animated {
-            animation: sunburstGlow 3s ease-in-out infinite;
-          }
-          .logo-light { display: block; }
-          .logo-dark { display: none; }
-          @media (prefers-color-scheme: dark) {
-            .logo-light { display: none; }
-            .logo-dark { display: block; }
-          }
-        </style>
-        <div class="sunburst-header">
-          <img src="assets/images/sunburst-logo-cropped.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator" class="sunburst-logo-animated logo-light">
-          <img src="assets/images/sunburst-logo-dark.png" alt="SunBURST - GPU-Native Bayesian Evidence Integrator" class="sunburst-logo-animated logo-dark">
-        </div>
-
-        <p>SunBURST achieves <strong>O(d<sup>0.67</sup>) scaling</strong> through 512+ dimensions—a breakthrough in computational Bayesian inference that enables model comparison problems previously considered intractable.</p>
-
-        <h2>What It Does</h2>
-        <p>Bayesian model comparison requires computing the <em>evidence</em> (marginal likelihood) for competing models. This integral over parameter space is notoriously difficult to calculate in high dimensions. SunBURST exploits GPU parallelism to make this tractable for real-world problems.</p>
-
-        <h2>Key Features</h2>
-        <ul>
-          <li><strong>Dimensional scaling</strong>: O(d<sup>0.67</sup>) tested through 512 dimensions</li>
-          <li><strong>GPU acceleration</strong>: CUDA-based parallel computation</li>
-          <li><strong>Local execution</strong>: Runs on your hardware, using your GPUs</li>
-          <li><strong>Python interface</strong>: Clean API for integration with existing workflows</li>
-          <li><strong>Machine precision</strong>: Validated against analytical solutions for Gaussian posteriors</li>
-        </ul>
-
-        <h2>Performance</h2>
-        <p>Benchmarked against established nested sampling tools (dynesty, ultranest, nautilus), SunBURST demonstrates 245× speedup at 32 dimensions for Gaussian posteriors while maintaining machine precision accuracy.</p>
-
-        <h2>Architecture</h2>
-        <p>SunBURST runs locally on your machine. The interface connects to a local server, keeping all computation on your infrastructure:</p>
-        <ol>
-          <li>Install SunBURST package (Python + CUDA)</li>
-          <li>Launch local server</li>
-          <li>Define models, run evidence calculations, visualize results</li>
-        </ol>
-        <p>This architecture means zero cloud costs and complete control over your data.</p>
-
-        <div class="download-section">
-          <h3>Get SunBURST</h3>
-          <p>SunBURST is under active development. Leave your information to be notified when it's available for download.</p>
-          <p style="margin-top: 1rem;">
-            <a href="contact.html" class="btn">Contact for Access</a>
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <img src="assets/images/sunburst_logo.png" alt="SunBURST Logo" style="width: 120px; height: auto; margin-bottom: 1rem;">
+          <h1>SunBURST</h1>
+          <p style="color: #666; font-size: 0.95rem;">
+            <strong>S</strong>eeded <strong>U</strong>niverse <strong>N</strong>avigation — 
+            <strong>B</strong>ayesian <strong>U</strong>nification via <strong>R</strong>adial <strong>S</strong>hooting <strong>T</strong>echniques
           </p>
         </div>
 
+        <p class="intro-lead">
+          A deterministic, GPU-accelerated algorithm for Bayesian model evidence calculation, 
+          achieving machine-precision accuracy through 1024 dimensions.
+        </p>
+
+        <p style="margin: 2rem 0; text-align: center;">
+          <a href="https://github.com/beastraban/sunburst" class="btn" style="display: inline-block; width: 220px; text-align: center; box-sizing: border-box;">GitHub Repository</a>
+          <a href="http://arxiv.org/abs/2601.19957" class="btn btn-secondary" style="margin-left: 0.5rem; display: inline-block; width: 220px; text-align: center; box-sizing: border-box;">arXiv Paper</a>
+        </p>
+
+        <h2>Overview</h2>
+
+        <p>
+          SunBURST is a novel approach to computing Bayesian model evidence (marginal likelihood) 
+          that softens the "curse of dimensionality" plaguing traditional methods like nested sampling.
+        </p>
+
+        <p><strong>Key achievements:</strong></p>
+        <ul>
+          <li>Machine-precision accuracy on Gaussian posteriors through 1024 dimensions</li>
+          <li>Sub-linear scaling O(d<sup>0.67</sup>) vs. traditional O(d²) methods</li>
+          <li>Deterministic results with no MCMC convergence concerns</li>
+          <li>Automatic multimodal detection and integration</li>
+          <li>Full posterior characterization via Laplace approximation</li>
+        </ul>
+
+        <h2>The Pipeline</h2>
+
+        <p>
+          SunBURST operates in three stages, named after movements in Guang Ping Yang Style Tai Chi 
+          (廣平楊式太極拳) in honor of Master Donald Rubbo:
+        </p>
+
+        <p><strong>🐯 CarryTiger</strong> (抱虎歸山) — Mode detection via GPU ray casting from prior boundary</p>
+
+        <p><strong>🐉 GreenDragon</strong> (青龍出水) — Peak refinement using GPU-accelerated L-BFGS optimization</p>
+
+        <p><strong>🏹 BendTheBow</strong> (彎弓射虎) — Evidence calculation via Laplace approximation with radial verification</p>
+
+        <h2>Quick Start</h2>
+
+        <pre style="background: #1f2937; color: #f9fafb; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6;"><code>pip install sunburst-bayes
+
+<span style="color: #f472b6;">import</span> numpy <span style="color: #f472b6;">as</span> np
+<span style="color: #f472b6;">from</span> sunburst <span style="color: #f472b6;">import</span> compute_evidence
+
+<span style="color: #9ca3af;"># Define your log-likelihood function</span>
+<span style="color: #f472b6;">def</span> <span style="color: #fbbf24;">log_likelihood</span>(x):
+    <span style="color: #f472b6;">return</span> -0.5 * np.sum(x**2, axis=1)
+
+<span style="color: #9ca3af;"># Set parameter bounds</span>
+bounds = [(-10, 10)] * 100  <span style="color: #9ca3af;"># 100-dimensional problem</span>
+
+<span style="color: #9ca3af;"># Compute evidence</span>
+result = compute_evidence(log_likelihood, bounds)
+
+<span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"log Z = {result.log_evidence:.4f}"</span>)
+<span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"Modes found: {result.n_peaks}"</span>)
+<span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"Time: {result.wall_time:.2f}s"</span>)</code></pre>
+
+        <h2>Performance</h2>
+
+        <p>
+          Benchmarks on NVIDIA RTX 3090 demonstrate sub-linear scaling with dimension, 
+          achieving <strong>1024D in 6.8 seconds</strong> while competitors timeout:
+        </p>
+
+        <figure style="margin: 2rem 0; text-align: center;">
+          <img src="assets/images/scaling_figure.png" alt="SunBURST dimensional scaling comparison" style="max-width: 100%; border-radius: 8px;">
+          <figcaption style="color: #666; font-size: 0.9rem; margin-top: 0.75rem;">
+            Wall-clock time vs. dimension comparing SunBURST against dynesty, slice sampling, 
+            UltraNest, and JAXNS. SunBURST achieves 1269× speedup at 64D and continues scaling 
+            to 1024D where all other methods timeout.
+          </figcaption>
+        </figure>
+
+        <h2>Applications</h2>
+
+        <p>SunBURST is designed for high-dimensional Bayesian inference problems including:</p>
+
+        <ul>
+          <li><strong>Cosmological parameter estimation</strong> — CMB analysis, dark energy constraints</li>
+          <li><strong>Gravitational wave astronomy</strong> — Source characterization, model selection</li>
+          <li><strong>Machine learning</strong> — Bayesian neural network evidence, model comparison</li>
+          <li><strong>Drug discovery</strong> — High-dimensional molecular parameter spaces</li>
+          <li><strong>Financial modeling</strong> — Multi-factor model selection</li>
+        </ul>
+
         <h2>Citation</h2>
-        <pre><code>@software{wolfson_sunburst,
-  author = {Wolfson, Ira},
-  title = {SunBURST: GPU-Accelerated Bayesian Evidence Calculator},
-  year = {2026},
-  url = {https://irawolfson.com/sunburst}
-}</code></pre>
+
+        <p>If you use SunBURST in your research, please cite:</p>
+
+        <pre style="background: #1f2937; color: #f9fafb; border-radius: 8px; padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto;">@article{wolfson2026sunburst,
+    title={SunBURST: Deterministic GPU-Accelerated Bayesian Evidence 
+       via Mode-Centric Laplace Integration},
+    author={Wolfson, Ira},
+    journal={arXiv preprint arXiv:2601.19957},
+    year={2026}
+}</pre>
+
+        <h2>Contact</h2>
+
+        <p>
+          For questions, collaborations, or bug reports, please open an issue on 
+          <a href="https://github.com/beastraban/sunburst/issues">GitHub</a> or 
+          <a href="contact.html">get in touch</a>.
+        </p>
+
       </article>
     </main>
     
