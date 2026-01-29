@@ -46,7 +46,7 @@
 
         <p style="margin: 2rem 0; text-align: center;">
           <a href="https://github.com/beastraban/sunburst" class="btn" style="display: inline-block; width: 220px; text-align: center; box-sizing: border-box;">GitHub Repository</a>
-          <a href="http://arxiv.org/abs/2601.19957" class="btn btn-secondary" style="margin-left: 0.5rem; display: inline-block; width: 220px; text-align: center; box-sizing: border-box;">arXiv Paper</a>
+          <a href="https://arxiv.org/abs/2601.19957" class="btn btn-secondary" style="margin-left: 0.5rem; display: inline-block; width: 220px; text-align: center; box-sizing: border-box;">arXiv Paper</a>
         </p>
 
         <h2>Overview</h2>
@@ -72,22 +72,22 @@
           (廣平楊式太極拳) in honor of Master Donald Rubbo:
         </p>
 
-        <p><strong>🐯 CarryTiger</strong> (抱虎歸山) — Mode detection via GPU ray casting from prior boundary</p>
+        <p>🐯 <strong>CarryTiger</strong> (抱虎歸山) — Mode detection via GPU ray casting from prior boundary</p>
 
-        <p><strong>🐉 GreenDragon</strong> (青龍出水) — Peak refinement using GPU-accelerated L-BFGS optimization</p>
+        <p>🐉 <strong>GreenDragon</strong> (青龍出水) — Peak refinement using GPU-accelerated L-BFGS optimization</p>
 
-        <p><strong>🏹 BendTheBow</strong> (彎弓射虎) — Evidence calculation via Laplace approximation with radial verification</p>
+        <p>🏹 <strong>BendTheBow</strong> (彎弓射虎) — Evidence calculation via Laplace approximation with radial verification</p>
 
         <h2>Quick Start</h2>
 
         <pre style="background: #1f2937; color: #f9fafb; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6;"><code>pip install sunburst-bayes
 
-<span style="color: #f472b6;">import</span> numpy <span style="color: #f472b6;">as</span> np
-<span style="color: #f472b6;">from</span> sunburst <span style="color: #f472b6;">import</span> compute_evidence
+<span style="color: #f472b6;">from</span> sunburst <span style="color: #f472b6;">import</span> compute_evidence, get_array_module
 
-<span style="color: #9ca3af;"># Define your log-likelihood function</span>
+<span style="color: #9ca3af;"># Define your log-likelihood function (GPU-native)</span>
 <span style="color: #f472b6;">def</span> <span style="color: #fbbf24;">log_likelihood</span>(x):
-    <span style="color: #f472b6;">return</span> -0.5 * np.sum(x**2, axis=1)
+    xp = get_array_module(x)  <span style="color: #9ca3af;"># CuPy if GPU, NumPy if CPU</span>
+    <span style="color: #f472b6;">return</span> -0.5 * xp.sum(x**2, axis=1)
 
 <span style="color: #9ca3af;"># Set parameter bounds</span>
 bounds = [(-10, 10)] * 100  <span style="color: #9ca3af;"># 100-dimensional problem</span>
@@ -98,6 +98,17 @@ result = compute_evidence(log_likelihood, bounds)
 <span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"log Z = {result.log_evidence:.4f}"</span>)
 <span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"Modes found: {result.n_peaks}"</span>)
 <span style="color: #f472b6;">print</span>(<span style="color: #a5f3fc;">f"Time: {result.wall_time:.2f}s"</span>)</code></pre>
+
+        <h2>Interactive GUI</h2>
+
+        <p>
+          An interactive Streamlit demo is available in the repository:
+        </p>
+
+        <pre style="background: #1f2937; color: #f9fafb; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6;"><code>git clone https://github.com/beastraban/sunburst.git
+cd sunburst
+pip install streamlit
+streamlit run app.py</code></pre>
 
         <h2>Performance</h2>
 
@@ -133,7 +144,7 @@ result = compute_evidence(log_likelihood, bounds)
 
         <pre style="background: #1f2937; color: #f9fafb; border-radius: 8px; padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto;">@article{wolfson2026sunburst,
     title={SunBURST: Deterministic GPU-Accelerated Bayesian Evidence 
-       via Mode-Centric Laplace Integration},
+           via Mode-Centric Laplace Integration},
     author={Wolfson, Ira},
     journal={arXiv preprint arXiv:2601.19957},
     year={2026}
