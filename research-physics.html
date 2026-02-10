@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications - Ira Wolfson</title>
-  <meta name="description" content="Selected publications in physics foundations, cosmology, neuroscience, and AI ethics.">
+  <title>Physics Research - Ira Wolfson</title>
+  <meta name="description" content="Physics research: cosmology, thermodynamics, and the foundations of irreversibility.">
   <link rel="icon" href="assets/images/IRA-13_short.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,15 @@
         <ul class="nav-links">
           <li><a href="index.html">About</a></li>
           <li class="nav-dropdown">
-            <a href="research.html">Research</a>
+            <a href="research.html" class="active">Research</a>
             <ul class="dropdown-menu">
-              <li><a href="research-physics.html">Physics</a></li>
+              <li><a href="research-physics.html" class="active">Physics</a></li>
               <li><a href="research-philosophy.html">Philosophy</a></li>
               <li><a href="research-computation.html">Scientific Computation</a></li>
               <li><a href="research-misc.html">Misc.</a></li>
             </ul>
           </li>
-          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="publications.html">Publications</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="sunburst.html">SunBURST</a></li>
           <li><a href="services.html">Services</a></li>
@@ -39,18 +39,53 @@
     <main class="main-content">
       <article class="page-content">
         <header class="page-header">
-          <h1>Selected Publications</h1>
-          <p>For a complete list, see my <a href="https://scholar.google.com/citations?user=QpU7a-AAAAAJ">Google Scholar profile</a>.</p>
+          <h1>Physics</h1>
         </header>
 
-        <h2>Physics Foundations</h2>
+        <h2>Foundations &amp; Thermodynamics</h2>
+
+        <div class="publication">
+          <div class="publication-title">Geometric Origin of the Bekenstein–Hawking Entropy Prefactor from Null-Boundary Phase Space</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Shows that the numerical prefactor 1/4 in the Bekenstein–Hawking entropy can be traced to the covariant phase-space structure of general relativity at a null boundary. Two geometric reductions — the null characteristic constraint and an exterior symplectic quotient — fix the effective symplectic rank density, yielding the prefactor as a geometric property of gravitational phase space rather than a model-dependent microscopic input.</p>
+          <div class="publication-links">
+            <a href="assets/Papers/BH_entropy_geometric_prefactor.pdf">Local PDF</a>
+          </div>
+          <div class="paper-timestamp">
+            Uploaded: 2026-02-09 · SHA-256: <code>abd81a5138c0807171bacb0414041947d4c955dc1322b3761780b6f57d4ec51f</code>
+            <br><a href="verify.html">How to verify</a> · Git commit history serves as third-party timestamp.
+          </div>
+        </div>
 
         <div class="publication">
           <div class="publication-title">The Geometric Origin of Time's Arrow: Loschmidt Resolved</div>
-          <div class="publication-meta">I. Wolfson — 2025</div>
-          <p>Resolves the 150-year-old Loschmidt paradox by showing that irreversibility emerges from the intersection of quantum mechanics and classical chaos. Neither alone breaks time symmetry; together they produce geometric impossibility. Chaos exponentially amplifies irreducible ℏ-scale uncertainty until stable manifolds contract below quantum resolution, rendering time-reversed trajectories physically inaccessible despite being mathematically valid.</p>
+          <div class="publication-meta">I. Wolfson — Under review at Physical Review E, 2025</div>
+          <p>Resolves the 150-year-old Loschmidt paradox by showing that irreversibility emerges from the intersection of quantum mechanics and classical chaos. Chaos exponentially amplifies irreducible ℏ-scale uncertainty until stable manifolds contract below quantum resolution, rendering time-reversed trajectories physically inaccessible despite being mathematically valid.</p>
           <div class="publication-links">
             <a href="https://arxiv.org/abs/2511.03843">arXiv</a>
+            <!--<a href="assets/Papers/loschmidt.pdf">Local PDF</a>-->
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">Relativistic Thermodynamics</div>
+          <div class="publication-meta">I. Wolfson — Under review at Physical Review D</div>
+          <p>A comprehensive treatment of thermodynamic transformations in relativistic systems, featuring six independent proofs. Connects information-theoretic entropy to relativistic frameworks.</p>
+          <div class="publication-links">
+            <!--<a href="">arXiv</a>-->
+            <!--<a href="assets/Papers/rel-thermo.pdf">Local PDF</a>-->
+            <em>Preprint coming soon</em>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">Geometric Entropy</div>
+          <div class="publication-meta">I. Wolfson — Submitted, 2025</div>
+          <p>Develops a framework connecting spatial and temporal uncertainty measures through geometric entropy, with experimental validation from NMR experiments. Entropy measures epistemic uncertainty within physically-determined boundaries.</p>
+          <div class="publication-links">
+            <!--<a href="">arXiv</a>-->
+            <!--<a href="assets/Papers/geometric-entropy.pdf">Local PDF</a>-->
+            <em>Preprint coming soon</em>
           </div>
         </div>
 
@@ -63,6 +98,7 @@
           <div class="publication-links">
             <a href="https://arxiv.org/abs/2003.01617">arXiv</a>
             <a href="https://doi.org/10.1088/1475-7516/2020/09/047">DOI</a>
+            <!--<a href="assets/Papers/axion-su2.pdf">Local PDF</a>-->
           </div>
         </div>
 
@@ -73,6 +109,7 @@
           <div class="publication-links">
             <a href="https://arxiv.org/abs/1903.11843">arXiv</a>
             <a href="https://doi.org/10.1088/1475-7516/2019/06/007">DOI</a>
+            <!--<a href="assets/Papers/neff.pdf">Local PDF</a>-->
           </div>
         </div>
 
@@ -83,28 +120,7 @@
           <div class="publication-links">
             <a href="https://arxiv.org/abs/2110.10557">arXiv</a>
             <a href="https://doi.org/10.1088/1475-7516/2022/01/036">DOI</a>
-          </div>
-        </div>
-
-        <h2>Neuroscience</h2>
-
-        <div class="publication">
-          <div class="publication-title">Short-term plasticity as 'energetic memory' of ion channel components of action potential</div>
-          <div class="publication-meta">Y. Ben Abu, I. Wolfson — Royal Society Open Science, 2024</div>
-          <p>Proposes a new model for ion channel multiphysics behavior and action potential dynamics. Treats ion channels as the basic unit operators for information transfer in the nervous system, with short-term plasticity functioning as a form of energetic memory.</p>
-          <div class="publication-links">
-            <a href="https://doi.org/10.1098/rsos.231420">DOI</a>
-          </div>
-        </div>
-
-        <h2>AI Ethics & Philosophy</h2>
-
-        <div class="publication">
-          <div class="publication-title">Informed Consent for AI Consciousness Research: A Talmudic Framework</div>
-          <div class="publication-meta">I. Wolfson — AI & Ethics, 2025</div>
-          <p>Develops ethical principles for consciousness research on AI systems using Talmudic legal reasoning. Addresses the moral paradox of investigating consciousness in entities whose moral status depends on the investigation's outcome.</p>
-          <div class="publication-links">
-            <a href="https://doi.org/10.1007/s43681-025-00852-z">DOI</a>
+            <!--<a href="assets/Papers/small-field.pdf">Local PDF</a>-->
           </div>
         </div>
 

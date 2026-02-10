@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research - Ira Wolfson</title>
-  <meta name="description" content="Research projects in computational physics, Bayesian epistemology, and AI ethics.">
+  <title>Scientific Computation Research - Ira Wolfson</title>
+  <meta name="description" content="Scientific computation research: GPU-accelerated Bayesian evidence calculation.">
   <link rel="icon" href="assets/images/IRA-13_short.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,14 +23,13 @@
             <ul class="dropdown-menu">
               <li><a href="research-physics.html">Physics</a></li>
               <li><a href="research-philosophy.html">Philosophy</a></li>
-              <li><a href="research-computation.html">Scientific Computation</a></li>
+              <li><a href="research-computation.html" class="active">Scientific Computation</a></li>
               <li><a href="research-misc.html">Misc.</a></li>
             </ul>
           </li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="sunburst.html">SunBURST</a></li>
-
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -40,27 +39,19 @@
     <main class="main-content">
       <article class="page-content">
         <header class="page-header">
-          <h1>Research</h1>
+          <h1>Scientific Computation</h1>
         </header>
 
-        <div class="research-project">
-          <h3><a href="research-physics.html">Physics</a></h3>
-          <p>Foundational physics and thermodynamics — resolving the Loschmidt paradox, relativistic thermodynamics, geometric entropy — alongside cosmology work on inflationary models and primordial power spectra.</p>
-        </div>
-
-        <div class="research-project">
-          <h3><a href="research-philosophy.html">Philosophy</a></h3>
-          <p>Bayesian epistemology applied to longstanding philosophical problems, the demarcation of science, media polarization, and applied ethics. Argues that Bayesian frameworks dissolve rather than solve traditional debates.</p>
-        </div>
-
-        <div class="research-project">
-          <h3><a href="research-computation.html">Scientific Computation</a></h3>
-          <p>GPU-accelerated Bayesian evidence calculation. SunBURST achieves O(d<sup>0.67</sup>) scaling through 1024+ dimensions, enabling model selection problems previously considered computationally impossible.</p>
-        </div>
-
-        <div class="research-project">
-          <h3><a href="research-misc.html">Misc.</a></h3>
-          <p>AI consciousness ethics — Talmudic frameworks for responsible consciousness research and the "Suffering Toasters" methodology — and neuroscience work on ion channel dynamics and short-term plasticity.</p>
+        <div class="publication">
+          <div class="publication-title">SunBURST: GPU-Accelerated Bayesian Evidence Calculation</div>
+          <div class="publication-meta">I. Wolfson — In preparation for MNRAS</div>
+          <p>Bayesian model comparison requires computing intractable high-dimensional integrals. SunBURST exploits GPU parallelism to achieve O(d<sup>0.67</sup>) scaling through 1024+ dimensions — a paradigm shift enabling model selection problems previously considered computationally impossible. The framework represents a breakthrough in GPU-accelerated Bayesian evidence calculation.</p>
+          <p>See the dedicated <a href="sunburst.html">SunBURST project page</a> for more details.</p>
+          <div class="publication-links">
+            <!--<a href="">arXiv</a>-->
+            <!--<a href="assets/Papers/sunburst.pdf">Local PDF</a>-->
+            <em>Paper in preparation</em>
+          </div>
         </div>
 
       </article>
