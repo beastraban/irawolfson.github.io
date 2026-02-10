@@ -61,16 +61,25 @@
         <h3>On Windows (PowerShell)</h3>
 <pre><code>Get-FileHash filename.pdf -Algorithm SHA256</code></pre>
 
-        <p>If the output matches the hash displayed on this site, the file is identical to the version that was committed to the repository on the stated date.</p>
+        <p>If the output matches the hash displayed on this site, the file is byte-for-byte identical to the version that was committed to the repository.</p>
 
         <h2>Third-party verification via Git</h2>
 
-        <p>This site is hosted on GitHub Pages. The full commit history — including when each file was added or modified — is publicly available at <a href="https://github.com/irawolfson/irawolfson.github.io">github.com/irawolfson/irawolfson.github.io</a>. GitHub's commit timestamps are set by GitHub's servers and cannot be retroactively altered without leaving a trace in the repository's hash chain.</p>
+        <p>This site is hosted on GitHub Pages. The full commit history is publicly available at <a href="https://github.com/irawolfson/irawolfson.github.io">github.com/irawolfson/irawolfson.github.io</a>.</p>
 
         <p>To verify when a specific paper was first committed:</p>
 <pre><code>git log --follow --diff-filter=A -- assets/Papers/filename.pdf</code></pre>
 
-        <p>This returns the date of the commit that first added the file to the repository.</p>
+        <h3>What proves what</h3>
+
+        <p>The <strong>SHA-256 hash</strong> proves integrity — that the file has not been modified since the hash was recorded. It says nothing about timing on its own.</p>
+
+        <p><strong>Git</strong> provides the timing. However, there is an important distinction: a Git commit has two dates. The <em>author date</em> is set locally and can be backdated. The <em>push receipt timestamp</em> is recorded by GitHub's servers when the push is received, and cannot be altered by the repository owner. The authoritative timestamp is therefore GitHub's server-side record, not the local author date.</p>
+
+        <p>The <strong>proof chain</strong> works as follows: a commit contains both the PDF and the HTML page displaying its hash. GitHub records when that commit was pushed. Anyone can later download the PDF, recompute the hash, confirm it matches the page, and check GitHub's push history to verify the date. If the PDF, the hash, and the commit all appear together, the file is locked to that point in time.</p>
+
+        <p>To inspect GitHub's server-side push events, use the <a href="https://docs.github.com/en/rest/activity/events">GitHub Events API</a>:</p>
+<pre><code>curl https://api.github.com/repos/irawolfson/irawolfson.github.io/events</code></pre>
 
       </article>
     </main>
