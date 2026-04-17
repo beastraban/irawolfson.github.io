@@ -41,14 +41,14 @@ body {
 }
 
 .site-nav {
-  max-width: var(--max-width);
+  max-width: 68rem;
   margin: 0 auto;
   padding: var(--space-md) var(--space-lg);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: baseline;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .site-title {
@@ -64,9 +64,10 @@ body {
 
 .nav-links {
   display: flex;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   list-style: none;
   flex-wrap: wrap;
+  transform: translateY(0.8rem);
 }
 
 .nav-links a {
@@ -358,3 +359,62 @@ pre code { background: none; padding: 0; font-size: 0.85rem; }
   }
   .dropdown-menu::before { display: none; }
 }
+
+/* MathJax Styling */
+.MathJax {
+  font-size: inherit !important;
+  color: var(--color-text) !important;
+}
+
+.MathJax_Display {
+  margin: 1.5em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+mjx-container[jax="CHTML"] {
+  line-height: 1.2;
+  font-size: inherit;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0.5em;
+}
+
+/* Math overflow handling */
+mjx-math {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Equation numbering */
+mjx-container[jax="CHTML"] mjx-mtable mjx-mlabeledtr mjx-mtd:first-child {
+  text-align: right;
+  padding-right: 1em;
+}
+
+/* Math colors */
+mjx-math, mjx-mstyle, mjx-mrow, mjx-mi, mjx-mn, mjx-mo, mjx-mtext {
+  color: var(--color-text) !important;
+}
+
+/* Responsive math */
+@media (max-width: 768px) {
+  mjx-container[jax="CHTML"][display="true"] {
+    font-size: 0.9em;
+  }
+  
+  .MathJax_Display {
+    margin: 1em 0 !important;
+  }
+}
+
