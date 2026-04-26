@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weaponized Malfunction — Entropically Yours</title>
+<meta name="description" content="How depression, cross-training, and a paranoid review process became a research methodology.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+
+/* ── NUMBERED LIST ── */
+ol.audit{margin:1.8rem 0 1.8rem 0;padding:0;list-style:none;counter-reset:audit-counter;}
+ol.audit li{counter-increment:audit-counter;padding:0.9rem 1rem 0.9rem 3.2rem;position:relative;border-bottom:var(--rule-thin);}
+ol.audit li:first-child{border-top:var(--rule-thin);}
+ol.audit li::before{content:counter(audit-counter);position:absolute;left:0.8rem;top:0.9rem;font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:500;}
+
+/* ── FOOTNOTES ── */
+.footnotes{margin-top:4rem;padding-top:1.8rem;border-top:2px solid var(--ink);}
+.footnotes h3{margin-top:0;margin-bottom:1.2rem;}
+.footnotes ol{padding-left:1.4rem;}
+.footnotes li{font-size:0.88rem;color:var(--ink-light);line-height:1.6;margin-bottom:0.8rem;}
+.footnotes li a{color:var(--ink-light);}
+sup a{color:var(--accent);text-decoration:none;font-family:'DM Mono',monospace;font-size:0.7rem;}
+sup a:hover{text-decoration:underline;}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:630px;}
+.lead-image img{width:100%;display:block;filter:sepia(15%) contrast(1.05);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── PROVENANCE LINK ── */
+.provenance-link{margin:3.5rem 0;padding:1.8rem 2rem;background:var(--paper-warm);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);}
+.provenance-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.8rem;}
+.provenance-desc{font-size:0.95rem;color:var(--ink-mid);line-height:1.6;margin-bottom:1.2rem;}
+.provenance-btn{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 18px;border:1px solid var(--ink-mid);color:var(--ink);text-decoration:none;}
+.provenance-btn:hover{background:var(--ink);color:var(--paper);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Process &amp; Method</div>
+    <h1>Weaponized Malfunction</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; April 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> How depression, intellectual cross-training, and a paranoid review process became a research methodology. The black dog turns out to be an excellent research assistant, even if the working conditions are terrible.</div>
+  </header>
+
+  <p>How am I able to write so many papers, on so broad a subject matter, in such a short time?</p>
+
+  <p>The answer is surprising. I have depression. Not the &#x201C;I feel sad sometimes&#x201D; kind. The &#x201C;I literally cannot find the will to get out of bed,&#x201D; diagnosed, medication-treated kind. If you don&#x2019;t have it, you don&#x2019;t understand it. I recommend William Styron&#x2019;s <em>Darkness Visible</em> and Andrew Solomon&#x2019;s <em>The Noonday Demon</em> to acquaint yourself with my black dog.</p>
+
+  <p>This depression does several things.</p>
+
+  <p>First, it provides long stretches of time in bed, with nothing for my mind to do but anguish over darker moments, lost opportunities, and imagined future failures&#x2014;and also churn through the more interesting questions I have picked up along the way. The mind does not stop. It cannot. So it works.</p>
+
+  <p>Second, it gives me a powerful incentive to stay busy. When I get bored and listless, I fall into depression. Been there, done that. No thanks. So I try to outrun my frustrations.</p>
+
+  <p>Third&#x2014;and this is perhaps my superpower in disguise&#x2014;it drives what I call intellectual cross-training. When I am working on something, and I get stuck, I first try to power through, as the saying goes: &#x201C;Force doesn&#x2019;t work&#x2014;use more force.&#x201D;<sup><a href="#fn1" id="ref1">1</a></sup> This lodges the problem firmly in my recurring thought process, whether I want it there or not. When that fails, and since I am trying to outrun frustration anyway, I switch to a different topic entirely. Rinse and repeat. Often, a problem from one discipline is solved by an insight from a completely disconnected realm. The black dog turns out to be an excellent research assistant, even if the working conditions are terrible.</p>
+
+  <p>This is why the output looks the way it does. It is not a production line. It is a mind that will not stop, pointed at a set of problems it finds genuinely interesting, running on the fuel of not wanting to be still.</p>
+
+  <p>Paradoxically, being in a less-than-famous college means I am not constrained by funding and promotional incentives. So I can actually research whatever the hell I want to.</p>
+
+  <figure class="lead-image">
+    <img src="Paradise_Lost_1.jpg"
+         alt="Gustave Doré, Paradise Lost Book I — the fallen angels cast into darkness (1866)"
+         loading="lazy">
+    <figcaption>&#x201C;If I exorcise my devils, well my angels may leave too&#x2026;&#x201D;<br>Tom Waits, <em>Please Call Me, Baby</em> &mdash; Heart of Saturday Night (1974) &nbsp;&middot;&nbsp; Gustave Dor&#xe9;, <em>Paradise Lost</em>, Book&nbsp;I (1866)</figcaption>
+  </figure>
+
+  <h2>The Lonely Scholar Problem</h2>
+
+  <p>The greatest danger for an independent researcher is mistaking internal consistency for external validity. Without the friction of a laboratory group, a departmental seminar, or a collaborator who will tell you when you are wrong, it is easy to construct elegant proofs for fundamentally malformed questions.</p>
+
+  <p>I have done this. Once. I produced six independent proofs of a temperature transformation law that the field had already recognized as the wrong question to ask.<sup><a href="#fn2" id="ref2">2</a></sup> The paper was built on the scalar vocabulary of a century-old debate. Israel&#x2019;s covariant formalism&#x2014;the actual established foundation of relativistic thermodynamics&#x2014;uses a different language entirely. I missed it. An arXiv rejection<sup><a href="#fn3" id="ref3">3</a></sup> forced the literature search that should have come first.</p>
+
+  <p>The lesson was not &#x201C;be more careful,&#x201D; even if I could. The lesson was structural: the process needed a stage that does not currently exist in most solo research workflows. I added it.</p>
+
+  <h2>The Pre-Proof Ontology Check</h2>
+
+  <p>My process usually starts with a conversation, which is usually pretty benign. At one point, something or other will pique my curiosity, and the dangerous &#x201C;hmmm&#x2026; I wonder&#x2026;&#x201D; will surface. That&#x2019;s where the idea comes from. Most often, I&#x2019;ll sit with it for a couple of days, mulling it over with my other personalities, the black dog, and my wife.</p>
+
+  <p>However, before any serious drafting, every new idea must pass a conceptual audit. Five questions, answered explicitly, before a single theorem is attempted:</p>
+
+  <ol class="audit">
+    <li>Can the claim be stated in the field&#x2019;s established terminology? If not, stop and do the literature search first.</li>
+    <li>What are the 3&#x2013;10 foundational papers that represent the field&#x2019;s natural home for this question?</li>
+    <li>How does this formulation differ from existing work? Is the difference a genuine contribution or a reframing of a solved problem?</li>
+    <li>What would the harshest critic say is malformed about the premise, even before reaching the argument?</li>
+    <li>What evidence would prove this is a category error rather than a bold insight?</li>
+  </ol>
+
+  <p>If question five cannot be answered, the project halts. A claim that cannot in principle be falsified is not physics. It is not philosophy either. It is noise.</p>
+
+  <p>This stage exists because of the EM Thermality incident.</p>
+
+  <h2>Adversarial Review</h2>
+
+  <p>I use AI extensively. For draft editing, for literature search, for LaTeX, and for hostile reads. The drafting agent and the crusher are explicitly partitioned. The crusher is given one instruction: find the fatal flaw. Not &#x201C;improve the paper.&#x201D; Find the flaw. If it cannot, the paper proceeds.</p>
+
+  <p>This is not a substitute for human peer review. It is a filter that ensures the paper arriving at peer review has already survived a serious attempt to kill it.</p>
+
+  <p>When a hostile read finds a real error, the paper is fixed. When a hostile read finds nothing, the original argument is defended. The distinction matters. More than once I have been told to dilute a conclusion that turned out to be correct. I did not dilute it. Of course, running several &#x201C;crush reviews&#x201D; also runs the risk of too much proofing, or over-editing, but that&#x2019;s a different issue.</p>
+
+  <h2>Forensic Scholarship</h2>
+
+  <p>High output from a single author at a non-elite institution triggers heuristics. I cannot change the institution. I can change the evidentiary trail.</p>
+
+  <p>Every citation is validated against primary sources. Every field-specific claim uses that field&#x2019;s native terminology. The mathematical derivations are cross-verified against canonical models. Where code or data underlies the results, it is publicly available&#x2014;on PyPI, on GitHub, with commit histories that predate the submission, sometimes by years.</p>
+
+  <p>This is not performative. It is the difference between a paper that <em>looks</em> credible and a paper that <em>is</em> credible. The distinction matters more when the other signals are ambiguous.</p>
+
+  <h2>What This System Does Not Prevent</h2>
+
+  <p>It does not prevent me from being wrong. For instance, a recent post I&#x2019;ve published tasks the double-blind process with removing prestige ratchets at the level of desk editors. This is not correct, and I probably need to correct the record on that. The pre-proof ontology check catches malformed questions, not incorrect answers to well-formed ones. The crush reviews catch logical errors, not empirical errors that require an experiment to detect. The reference validation catches missing citations, not missing concepts.</p>
+
+  <p>The system is designed to fail early and fail visibly. A paper that fails at Stage 1 costs an afternoon. A paper that fails after submission costs months and leaves a record. Early failure is the goal.</p>
+
+  <p>The system is also not complete. It will be updated when it fails again. The EM Thermality incident is in the incident log. So is the prestige ratchets case. The next one will be too.</p>
+
+  <h2>Why This Matters</h2>
+
+  <p>The academic system is not well-suited to solo researchers working across fields at speed. The heuristics are calibrated for large groups, slow output, and narrow specialization. I am none of those things.</p>
+
+  <p>The correct response for me is to build a support system that strips away noise, weaponizes self-doubt, leverages ruminations, and ruthlessly distills insight.</p>
+
+  <p>Will it work? I don&#x2019;t know. But the alternative&#x2014;doing nothing and sinking into the black mire of depression&#x2014;is worse. So it&#x2019;s either this or better drugs. And I&#x2019;m not sure I have enough money for better drugs.</p>
+
+  <div class="provenance-link">
+    <div class="provenance-eyebrow">Evidence</div>
+    <p class="provenance-desc">The cross-training described above is not metaphor. Below is the full research provenance tree&#x2014;every paper, seed idea, and dependency, traced from 2022 to the present. Purple nodes are ancestors. Green is published. The edges show where an idea from one field solved a problem in another.</p>
+    <a href="Provenance_map.svg" target="_blank" class="provenance-btn">View Research Provenance Tree &rarr;</a>
+  </div>
+
+  <div class="section-dinkus">&#x2014; &#x25C6; &#x2014;</div>
+
+  <div class="footnotes">
+    <h3>Notes</h3>
+    <ol>
+      <li id="fn1">&#x201C;&#x041D;&#x0435; &#x0431;&#x0435;&#x0440;&#x0451;&#x0442; &#x0441;&#x0438;&#x043B;&#x0430;&#x2014;&#x0431;&#x0435;&#x0440;&#x0438; &#x0431;&#x043E;&#x043B;&#x044C;&#x0448;&#x0435;&#x0439; &#x0441;&#x0438;&#x043B;&#x043E;&#x0439;&#x201D;&#x2014;I don&#x2019;t speak Russian, but I am told this is the origin. <a href="#ref1">&#x21A9;</a></li>
+      <li id="fn2">Of course, as a &#x201C;professional smart person,&#x201D; I surmised everyone else is simply stupid. Boy was I up for a rude awakening. <a href="#ref2">&#x21A9;</a></li>
+      <li id="fn3">I know&#x2026; <em>arXiv</em> rejection. <a href="#ref3">&#x21A9;</a></li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2783pt" height="1311pt" viewBox="0.00 0.00 2783.00 1311.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(43.2 1268.04)">
+<title>provenance</title>
+<polygon fill="#fafafa" stroke="none" points="-43.2,43.2 -43.2,-1268.04 2739.8,-1268.04 2739.8,43.2 -43.2,43.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1348.3" y="-1204.64" font-family="Helvetica Neue" font-size="18.00">Wolfson Research Provenance Tree · 2026-04-26</text>
+<text xml:space="preserve" text-anchor="middle" x="1348.3" y="-1183.04" font-family="Helvetica Neue" font-size="18.00">Green = published  |  Blue = under review  |  Amber = held/gated  |  Grey = parked  |  Red = scrapped  |  Purple = seed/ancestor  |  Cyan = emerging</text>
+<!-- voronoi -->
+<g id="node1" class="node">
+<title>voronoi</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M189.6,-1173.64C189.6,-1173.64 12,-1173.64 12,-1173.64 6,-1173.64 0,-1167.64 0,-1161.64 0,-1161.64 0,-1110.76 0,-1110.76 0,-1104.76 6,-1098.76 12,-1098.76 12,-1098.76 189.6,-1098.76 189.6,-1098.76 195.6,-1098.76 201.6,-1104.76 201.6,-1110.76 201.6,-1110.76 201.6,-1161.64 201.6,-1161.64 201.6,-1167.64 195.6,-1173.64 189.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="100.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">VoronoiShit.m</text>
+<text xml:space="preserve" text-anchor="middle" x="100.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Jun 2022]</text>
+<text xml:space="preserve" text-anchor="middle" x="100.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Voronoi tessellation</text>
+<text xml:space="preserve" text-anchor="middle" x="100.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">for Bayesian evidence</text>
+</g>
+<!-- sunburst_concept -->
+<g id="node9" class="node">
+<title>sunburst_concept</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M312.4,-1013.56C312.4,-1013.56 127.2,-1013.56 127.2,-1013.56 121.2,-1013.56 115.2,-1007.56 115.2,-1001.56 115.2,-1001.56 115.2,-950.68 115.2,-950.68 115.2,-944.68 121.2,-938.68 127.2,-938.68 127.2,-938.68 312.4,-938.68 312.4,-938.68 318.4,-938.68 324.4,-944.68 324.4,-950.68 324.4,-950.68 324.4,-1001.56 324.4,-1001.56 324.4,-1007.56 318.4,-1013.56 312.4,-1013.56"/>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-994.12" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">SunBURST concept formed</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-979.72" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Oct 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-965.32" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Innovation summary +</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-950.92" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">paper outline · 3 months before arXiv</text>
+</g>
+<!-- voronoi&#45;&gt;sunburst_concept -->
+<g id="edge1" class="edge">
+<title>voronoi-&gt;sunburst_concept</title>
+<path fill="none" stroke="#7c3aed" d="M158.4,-1098.26C158.4,-1098.26 158.4,-1023.3 158.4,-1023.3"/>
+<polygon fill="#7c3aed" stroke="#7c3aed" points="161.2,-1023.3 158.4,-1015.3 155.6,-1023.3 161.2,-1023.3"/>
+<text xml:space="preserve" text-anchor="middle" x="134.82" y="-1056.76" font-family="Helvetica Neue" font-size="10.00">3.5 yr incubation</text>
+</g>
+<!-- cosmology -->
+<g id="node2" class="node">
+<title>cosmology</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M427.6,-1173.64C427.6,-1173.64 250,-1173.64 250,-1173.64 244,-1173.64 238,-1167.64 238,-1161.64 238,-1161.64 238,-1110.76 238,-1110.76 238,-1104.76 244,-1098.76 250,-1098.76 250,-1098.76 427.6,-1098.76 427.6,-1098.76 433.6,-1098.76 439.6,-1104.76 439.6,-1110.76 439.6,-1110.76 439.6,-1161.64 439.6,-1161.64 439.6,-1167.64 433.6,-1173.64 427.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="338.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Cosmology portfolio</text>
+<text xml:space="preserve" text-anchor="middle" x="338.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Jan 2023]</text>
+<text xml:space="preserve" text-anchor="middle" x="338.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Post-SISSA · ANN for</text>
+<text xml:space="preserve" text-anchor="middle" x="338.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">likelihood retrieval</text>
+</g>
+<!-- cosmology&#45;&gt;sunburst_concept -->
+<g id="edge2" class="edge">
+<title>cosmology-&gt;sunburst_concept</title>
+<path fill="none" stroke="#7c3aed" stroke-dasharray="5,2" d="M281.2,-1098.26C281.2,-1098.26 281.2,-1023.3 281.2,-1023.3"/>
+<polygon fill="#7c3aed" stroke="#7c3aed" points="284,-1023.3 281.2,-1015.3 278.4,-1023.3 284,-1023.3"/>
+<text xml:space="preserve" text-anchor="middle" x="387.27" y="-1056.76" font-family="Helvetica Neue" font-size="10.00">ANN/cosmology hybrid</text>
+</g>
+<!-- toaster_heb -->
+<g id="node3" class="node">
+<title>toaster_heb</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M665.6,-1173.64C665.6,-1173.64 488,-1173.64 488,-1173.64 482,-1173.64 476,-1167.64 476,-1161.64 476,-1161.64 476,-1110.76 476,-1110.76 476,-1104.76 482,-1098.76 488,-1098.76 488,-1098.76 665.6,-1098.76 665.6,-1098.76 671.6,-1098.76 677.6,-1104.76 677.6,-1110.76 677.6,-1110.76 677.6,-1161.64 677.6,-1161.64 677.6,-1167.64 671.6,-1173.64 665.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="576.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">הקוגיטו של הטוסטר</text>
+<text xml:space="preserve" text-anchor="middle" x="576.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Jan 2023]</text>
+<text xml:space="preserve" text-anchor="middle" x="576.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">"The Toaster's Cogito"</text>
+<text xml:space="preserve" text-anchor="middle" x="576.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Hebrew essay · AI consciousness</text>
+</g>
+<!-- suffering_toasters -->
+<g id="node6" class="node">
+<title>suffering_toasters</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M938.6,-1173.64C938.6,-1173.64 761,-1173.64 761,-1173.64 755,-1173.64 749,-1167.64 749,-1161.64 749,-1161.64 749,-1110.76 749,-1110.76 749,-1104.76 755,-1098.76 761,-1098.76 761,-1098.76 938.6,-1098.76 938.6,-1098.76 944.6,-1098.76 950.6,-1104.76 950.6,-1110.76 950.6,-1110.76 950.6,-1161.64 950.6,-1161.64 950.6,-1167.64 944.6,-1173.64 938.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Suffering Toasters — Overleaf</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Jun 2023]</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">English version · Science →</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Nature → rejected arc (2 yr)</text>
+</g>
+<!-- toaster_heb&#45;&gt;suffering_toasters -->
+<g id="edge6" class="edge">
+<title>toaster_heb-&gt;suffering_toasters</title>
+<path fill="none" stroke="#aaaaaa" d="M678.07,-1136C678.07,-1136 739.18,-1136 739.18,-1136"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="739.18,-1138.8 747.18,-1136 739.18,-1133.2 739.18,-1138.8"/>
+</g>
+<!-- phys_trudge -->
+<g id="node4" class="node">
+<title>phys_trudge</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M2528.6,-1173.64C2528.6,-1173.64 2351,-1173.64 2351,-1173.64 2345,-1173.64 2339,-1167.64 2339,-1161.64 2339,-1161.64 2339,-1110.76 2339,-1110.76 2339,-1104.76 2345,-1098.76 2351,-1098.76 2351,-1098.76 2528.6,-1098.76 2528.6,-1098.76 2534.6,-1098.76 2540.6,-1104.76 2540.6,-1110.76 2540.6,-1110.76 2540.6,-1161.64 2540.6,-1161.64 2540.6,-1167.64 2534.6,-1173.64 2528.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">The Structure of Physical Trudge</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Mar 2023]</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Essay on mathematical</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">tractability</text>
+</g>
+<!-- pred_pred -->
+<g id="node10" class="node">
+<title>pred_pred</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M2528.6,-1013.56C2528.6,-1013.56 2351,-1013.56 2351,-1013.56 2345,-1013.56 2339,-1007.56 2339,-1001.56 2339,-1001.56 2339,-950.68 2339,-950.68 2339,-944.68 2345,-938.68 2351,-938.68 2351,-938.68 2528.6,-938.68 2528.6,-938.68 2534.6,-938.68 2540.6,-944.68 2540.6,-950.68 2540.6,-950.68 2540.6,-1001.56 2540.6,-1001.56 2540.6,-1007.56 2534.6,-1013.56 2528.6,-1013.56"/>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-994.12" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Predictable Predictability</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-979.72" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Oct 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-965.32" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">PhysicalTrudge v2</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-950.92" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Erdős seed crystallises</text>
+</g>
+<!-- phys_trudge&#45;&gt;pred_pred -->
+<g id="edge13" class="edge">
+<title>phys_trudge-&gt;pred_pred</title>
+<path fill="none" stroke="#aaaaaa" d="M2439.8,-1098.26C2439.8,-1098.26 2439.8,-1023.3 2439.8,-1023.3"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2442.6,-1023.3 2439.8,-1015.3 2437,-1023.3 2442.6,-1023.3"/>
+</g>
+<!-- phil_teaching -->
+<g id="node5" class="node">
+<title>phil_teaching</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M1905.6,-1173.64C1905.6,-1173.64 1728,-1173.64 1728,-1173.64 1722,-1173.64 1716,-1167.64 1716,-1161.64 1716,-1161.64 1716,-1110.76 1716,-1110.76 1716,-1104.76 1722,-1098.76 1728,-1098.76 1728,-1098.76 1905.6,-1098.76 1905.6,-1098.76 1911.6,-1098.76 1917.6,-1104.76 1917.6,-1110.76 1917.6,-1110.76 1917.6,-1161.64 1917.6,-1161.64 1917.6,-1167.64 1911.6,-1173.64 1905.6,-1173.64"/>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-1154.2" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Philosophy teaching (Braude)</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-1139.8" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Mar 2023]</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-1125.4" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Ethics, logic, Greek phil</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-1111" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">→ research substrate</text>
+</g>
+<!-- km -->
+<g id="node8" class="node">
+<title>km</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M1905.6,-1020.76C1905.6,-1020.76 1728,-1020.76 1728,-1020.76 1722,-1020.76 1716,-1014.76 1716,-1008.76 1716,-1008.76 1716,-943.48 1716,-943.48 1716,-937.48 1722,-931.48 1728,-931.48 1728,-931.48 1905.6,-931.48 1905.6,-931.48 1911.6,-931.48 1917.6,-937.48 1917.6,-943.48 1917.6,-943.48 1917.6,-1008.76 1917.6,-1008.76 1917.6,-1014.76 1911.6,-1020.76 1905.6,-1020.76"/>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-1001.32" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Knowledge &amp; Morality</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-986.92" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Oct 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-972.52" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Gettier + Hume dissolved</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-958.12" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">via Bayesian credences</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-943.72" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Noûs→Episteme→Synthese→PPR</text>
+</g>
+<!-- phil_teaching&#45;&gt;km -->
+<g id="edge9" class="edge">
+<title>phil_teaching-&gt;km</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1816.8,-1098.26C1816.8,-1098.26 1816.8,-1030.69 1816.8,-1030.69"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1819.6,-1030.69 1816.8,-1022.69 1814,-1030.69 1819.6,-1030.69"/>
+<text xml:space="preserve" text-anchor="middle" x="1834.57" y="-1056.76" font-family="Helvetica Neue" font-size="10.00">substrate</text>
+</g>
+<!-- ai_ethics_pub -->
+<g id="node7" class="node">
+<title>ai_ethics_pub</title>
+<path fill="#dcfce7" stroke="#16a34a" stroke-width="2" d="M948.58,-1013.56C948.58,-1013.56 751.02,-1013.56 751.02,-1013.56 745.02,-1013.56 739.02,-1007.56 739.02,-1001.56 739.02,-1001.56 739.02,-950.68 739.02,-950.68 739.02,-944.68 745.02,-938.68 751.02,-938.68 751.02,-938.68 948.58,-938.68 948.58,-938.68 954.58,-938.68 960.58,-944.68 960.58,-950.68 960.58,-950.68 960.58,-1001.56 960.58,-1001.56 960.58,-1007.56 954.58,-1013.56 948.58,-1013.56"/>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-994.12" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">✅ AI Ethics (Talmudic) — PUBLISHED</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-979.72" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">[Oct 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-965.32" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">AI &amp; Ethics, Springer</text>
+<text xml:space="preserve" text-anchor="middle" x="849.8" y="-950.92" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">End of 2-year arc</text>
+</g>
+<!-- suffering_toasters&#45;&gt;ai_ethics_pub -->
+<g id="edge7" class="edge">
+<title>suffering_toasters-&gt;ai_ethics_pub</title>
+<path fill="none" stroke="#aaaaaa" d="M849.8,-1098.26C849.8,-1098.26 849.8,-1023.85 849.8,-1023.85"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="852.6,-1023.85 849.8,-1015.85 847,-1023.85 852.6,-1023.85"/>
+</g>
+<!-- reality_wins -->
+<g id="node24" class="node">
+<title>reality_wins</title>
+<path fill="#dbeafe" stroke="#2563eb" stroke-width="2" d="M968.6,-427.24C968.6,-427.24 791,-427.24 791,-427.24 785,-427.24 779,-421.24 779,-415.24 779,-415.24 779,-335.56 779,-335.56 779,-329.56 785,-323.56 791,-323.56 791,-323.56 968.6,-323.56 968.6,-323.56 974.6,-323.56 980.6,-329.56 980.6,-335.56 980.6,-335.56 980.6,-415.24 980.6,-415.24 980.6,-421.24 974.6,-427.24 968.6,-427.24"/>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-407.8" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Reality Wins</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-393.4" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Mar 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-379" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Bed insight after Gödel parked.</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-364.6" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">AI needs oracle access to reality.</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-350.2" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Minds &amp; Machines (under review)</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-335.8" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">MoC7 Copenhagen candidate</text>
+</g>
+<!-- ai_ethics_pub&#45;&gt;reality_wins -->
+<g id="edge8" class="edge">
+<title>ai_ethics_pub-&gt;reality_wins</title>
+<path fill="none" stroke="#16a34a" d="M846,-938.09C846,-938.09 846,-437.31 846,-437.31"/>
+<polygon fill="#16a34a" stroke="#16a34a" points="848.8,-437.31 846,-429.31 843.2,-437.31 848.8,-437.31"/>
+<text xml:space="preserve" text-anchor="middle" x="862.29" y="-683.56" font-family="Helvetica Neue" font-size="10.00">parent</text>
+</g>
+<!-- rat_pol -->
+<g id="node12" class="node">
+<title>rat_pol</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M2319.6,-724C2319.6,-724 2142,-724 2142,-724 2136,-724 2130,-718 2130,-712 2130,-712 2130,-661.12 2130,-661.12 2130,-655.12 2136,-649.12 2142,-649.12 2142,-649.12 2319.6,-649.12 2319.6,-649.12 2325.6,-649.12 2331.6,-655.12 2331.6,-661.12 2331.6,-661.12 2331.6,-712 2331.6,-712 2331.6,-718 2325.6,-724 2319.6,-724"/>
+<text xml:space="preserve" text-anchor="middle" x="2230.8" y="-704.56" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Rational Polarization</text>
+<text xml:space="preserve" text-anchor="middle" x="2230.8" y="-690.16" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Nov 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="2230.8" y="-675.76" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Polarization is structural,</text>
+<text xml:space="preserve" text-anchor="middle" x="2230.8" y="-661.36" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">not cognitive. Ergo (under review).</text>
+</g>
+<!-- km&#45;&gt;rat_pol -->
+<g id="edge11" class="edge">
+<title>km-&gt;rat_pol</title>
+<path fill="none" stroke="#aaaaaa" d="M1918.08,-935C2040.64,-935 2230.8,-935 2230.8,-935 2230.8,-935 2230.8,-733.81 2230.8,-733.81"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2233.6,-733.81 2230.8,-725.81 2228,-733.81 2233.6,-733.81"/>
+<text xml:space="preserve" text-anchor="middle" x="2264.34" y="-889.48" font-family="Helvetica Neue" font-size="10.00">Cromwell's Rule</text>
+</g>
+<!-- abortion -->
+<g id="node13" class="node">
+<title>abortion</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M1905.6,-724C1905.6,-724 1728,-724 1728,-724 1722,-724 1716,-718 1716,-712 1716,-712 1716,-661.12 1716,-661.12 1716,-655.12 1722,-649.12 1728,-649.12 1728,-649.12 1905.6,-649.12 1905.6,-649.12 1911.6,-649.12 1917.6,-655.12 1917.6,-661.12 1917.6,-661.12 1917.6,-712 1917.6,-712 1917.6,-718 1911.6,-724 1905.6,-724"/>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-704.56" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Abortion Ethics</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-690.16" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Oct 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-675.76" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Graduated moral status</text>
+<text xml:space="preserve" text-anchor="middle" x="1816.8" y="-661.36" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">J. Bioethical Inquiry (under review)</text>
+</g>
+<!-- km&#45;&gt;abortion -->
+<g id="edge10" class="edge">
+<title>km-&gt;abortion</title>
+<path fill="none" stroke="#aaaaaa" d="M1816.8,-931.19C1816.8,-931.19 1816.8,-733.72 1816.8,-733.72"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1819.6,-733.72 1816.8,-725.72 1814,-733.72 1819.6,-733.72"/>
+<text xml:space="preserve" text-anchor="middle" x="1857.74" y="-889.48" font-family="Helvetica Neue" font-size="10.00">credence framework</text>
+</g>
+<!-- demarcation -->
+<g id="node17" class="node">
+<title>demarcation</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M1353.6,-853.48C1353.6,-853.48 1176,-853.48 1176,-853.48 1170,-853.48 1164,-847.48 1164,-841.48 1164,-841.48 1164,-776.2 1164,-776.2 1164,-770.2 1170,-764.2 1176,-764.2 1176,-764.2 1353.6,-764.2 1353.6,-764.2 1359.6,-764.2 1365.6,-770.2 1365.6,-776.2 1365.6,-776.2 1365.6,-841.48 1365.6,-841.48 1365.6,-847.48 1359.6,-853.48 1353.6,-853.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1264.8" y="-834.04" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Demarcation</text>
+<text xml:space="preserve" text-anchor="middle" x="1264.8" y="-819.64" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Dec 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="1264.8" y="-805.24" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Bayesian updateability</text>
+<text xml:space="preserve" text-anchor="middle" x="1264.8" y="-790.84" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">replaces Popper</text>
+<text xml:space="preserve" text-anchor="middle" x="1264.8" y="-776.44" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">EJPS (under review)</text>
+</g>
+<!-- km&#45;&gt;demarcation -->
+<g id="edge12" class="edge">
+<title>km-&gt;demarcation</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1715.55,-935C1556.2,-935 1264.8,-935 1264.8,-935 1264.8,-935 1264.8,-863.19 1264.8,-863.19"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1267.6,-863.19 1264.8,-855.19 1262,-863.19 1267.6,-863.19"/>
+<text xml:space="preserve" text-anchor="middle" x="1520.38" y="-889.48" font-family="Helvetica Neue" font-size="10.00">Bayesian method</text>
+</g>
+<!-- sunburst_arxiv -->
+<g id="node18" class="node">
+<title>sunburst_arxiv</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M308.6,-594.52C308.6,-594.52 131,-594.52 131,-594.52 125,-594.52 119,-588.52 119,-582.52 119,-582.52 119,-531.64 119,-531.64 119,-525.64 125,-519.64 131,-519.64 131,-519.64 308.6,-519.64 308.6,-519.64 314.6,-519.64 320.6,-525.64 320.6,-531.64 320.6,-531.64 320.6,-582.52 320.6,-582.52 320.6,-588.52 314.6,-594.52 308.6,-594.52"/>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-575.08" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">SunBURST arXiv:2601.19957</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-560.68" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Jan 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-546.28" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">3.5 yr from VoronoiShit.m</text>
+<text xml:space="preserve" text-anchor="middle" x="219.8" y="-531.88" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">PyPI: sunburst-bayes</text>
+</g>
+<!-- sunburst_concept&#45;&gt;sunburst_arxiv -->
+<g id="edge3" class="edge">
+<title>sunburst_concept-&gt;sunburst_arxiv</title>
+<path fill="none" stroke="#aaaaaa" d="M219.8,-938.19C219.8,-938.19 219.8,-604.43 219.8,-604.43"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="222.6,-604.43 219.8,-596.43 217,-604.43 222.6,-604.43"/>
+</g>
+<!-- erdos -->
+<g id="node31" class="node">
+<title>erdos</title>
+<path fill="#cffafe" stroke="#0891b2" d="M2528.6,-74.88C2528.6,-74.88 2351,-74.88 2351,-74.88 2345,-74.88 2339,-68.88 2339,-62.88 2339,-62.88 2339,-12 2339,-12 2339,-6 2345,0 2351,0 2351,0 2528.6,0 2528.6,0 2534.6,0 2540.6,-6 2540.6,-12 2540.6,-12 2540.6,-62.88 2540.6,-62.88 2540.6,-68.88 2534.6,-74.88 2528.6,-74.88"/>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-55.44" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Erdős project</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-41.04" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[Active]</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-26.64" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Seed: PhysicalTrudge (2023)</text>
+<text xml:space="preserve" text-anchor="middle" x="2439.8" y="-12.24" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">+ Predictable Predictability (2025)</text>
+</g>
+<!-- pred_pred&#45;&gt;erdos -->
+<g id="edge14" class="edge">
+<title>pred_pred-&gt;erdos</title>
+<path fill="none" stroke="#aaaaaa" d="M2439.8,-938.45C2439.8,-938.45 2439.8,-84.65 2439.8,-84.65"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2442.6,-84.65 2439.8,-76.65 2437,-84.65 2442.6,-84.65"/>
+</g>
+<!-- loschmidt -->
+<g id="node11" class="node">
+<title>loschmidt</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M2112.6,-731.2C2112.6,-731.2 1935,-731.2 1935,-731.2 1929,-731.2 1923,-725.2 1923,-719.2 1923,-719.2 1923,-653.92 1923,-653.92 1923,-647.92 1929,-641.92 1935,-641.92 1935,-641.92 2112.6,-641.92 2112.6,-641.92 2118.6,-641.92 2124.6,-647.92 2124.6,-653.92 2124.6,-653.92 2124.6,-719.2 2124.6,-719.2 2124.6,-725.2 2118.6,-731.2 2112.6,-731.2"/>
+<text xml:space="preserve" text-anchor="middle" x="2023.8" y="-711.76" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Quantum Inaccessibility</text>
+<text xml:space="preserve" text-anchor="middle" x="2023.8" y="-697.36" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Nov 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="2023.8" y="-682.96" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">arXiv:2511.03843</text>
+<text xml:space="preserve" text-anchor="middle" x="2023.8" y="-668.56" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Irreversibility = geometric</text>
+<text xml:space="preserve" text-anchor="middle" x="2023.8" y="-654.16" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">inaccessibility. NJP (under review).</text>
+</g>
+<!-- entropy_epist -->
+<g id="node29" class="node">
+<title>entropy_epist</title>
+<path fill="#cffafe" stroke="#0891b2" d="M1896.6,-238.36C1896.6,-238.36 1719,-238.36 1719,-238.36 1713,-238.36 1707,-232.36 1707,-226.36 1707,-226.36 1707,-161.08 1707,-161.08 1707,-155.08 1713,-149.08 1719,-149.08 1719,-149.08 1896.6,-149.08 1896.6,-149.08 1902.6,-149.08 1908.6,-155.08 1908.6,-161.08 1908.6,-161.08 1908.6,-226.36 1908.6,-226.36 1908.6,-232.36 1902.6,-238.36 1896.6,-238.36"/>
+<text xml:space="preserve" text-anchor="middle" x="1807.8" y="-218.92" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Entropy-Epistemology</text>
+<text xml:space="preserve" text-anchor="middle" x="1807.8" y="-204.52" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[Apr 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="1807.8" y="-190.12" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Physics rebuilt from</text>
+<text xml:space="preserve" text-anchor="middle" x="1807.8" y="-175.72" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">epistemological ground up</text>
+<text xml:space="preserve" text-anchor="middle" x="1807.8" y="-161.32" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Early draft</text>
+</g>
+<!-- loschmidt&#45;&gt;entropy_epist -->
+<g id="edge26" class="edge">
+<title>loschmidt-&gt;entropy_epist</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1934,-641.54C1934,-519.95 1934,-194 1934,-194 1934,-194 1918.58,-194 1918.58,-194"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1918.58,-191.2 1910.58,-194 1918.58,-196.8 1918.58,-191.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1877.4" y="-463.24" font-family="Helvetica Neue" font-size="10.00">inaccessibility</text>
+</g>
+<!-- bbd -->
+<g id="node30" class="node">
+<title>bbd</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M2372.6,-245.56C2372.6,-245.56 2195,-245.56 2195,-245.56 2189,-245.56 2183,-239.56 2183,-233.56 2183,-233.56 2183,-153.88 2183,-153.88 2183,-147.88 2189,-141.88 2195,-141.88 2195,-141.88 2372.6,-141.88 2372.6,-141.88 2378.6,-141.88 2384.6,-147.88 2384.6,-153.88 2384.6,-153.88 2384.6,-233.56 2384.6,-233.56 2384.6,-239.56 2378.6,-245.56 2372.6,-245.56"/>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-226.12" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Boltzmann Brain-Death → BJPS</text>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-211.72" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Apr 23, 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-197.32" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">BJPS-2026-252</text>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-182.92" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Horn 1: Liouville violation</text>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-168.52" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Horn 2: broken epistemic chain</text>
+<text xml:space="preserve" text-anchor="middle" x="2283.8" y="-154.12" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Both horns dead.</text>
+</g>
+<!-- loschmidt&#45;&gt;bbd -->
+<g id="edge27" class="edge">
+<title>loschmidt-&gt;bbd</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M2124.86,-646C2187.96,-646 2257.3,-646 2257.3,-646 2257.3,-646 2257.3,-255.56 2257.3,-255.56"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2260.1,-255.56 2257.3,-247.56 2254.5,-255.56 2260.1,-255.56"/>
+<text xml:space="preserve" text-anchor="middle" x="2318.09" y="-463.24" font-family="Helvetica Neue" font-size="10.00">regress argument</text>
+</g>
+<!-- em_sixproofs -->
+<g id="node14" class="node">
+<title>em_sixproofs</title>
+<path fill="#fee2e2" stroke="#dc2626" d="M2684.6,-846.28C2684.6,-846.28 2507,-846.28 2507,-846.28 2501,-846.28 2495,-840.28 2495,-834.28 2495,-834.28 2495,-783.4 2495,-783.4 2495,-777.4 2501,-771.4 2507,-771.4 2507,-771.4 2684.6,-771.4 2684.6,-771.4 2690.6,-771.4 2696.6,-777.4 2696.6,-783.4 2696.6,-783.4 2696.6,-834.28 2696.6,-834.28 2696.6,-840.28 2690.6,-846.28 2684.6,-846.28"/>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-826.84" font-family="Helvetica Neue" font-size="12.00" fill="#7f1d1d">EM Thermality — six-proofs</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-812.44" font-family="Helvetica Neue" font-size="12.00" fill="#7f1d1d">[Dec 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-798.04" font-family="Helvetica Neue" font-size="12.00" fill="#7f1d1d">"T'=T/γ universal" →</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-783.64" font-family="Helvetica Neue" font-size="12.00" fill="#7f1d1d">T not a scalar → SCRAPPED</text>
+</g>
+<!-- em_rebuilt -->
+<g id="node20" class="node">
+<title>em_rebuilt</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M2684.6,-601.72C2684.6,-601.72 2507,-601.72 2507,-601.72 2501,-601.72 2495,-595.72 2495,-589.72 2495,-589.72 2495,-524.44 2495,-524.44 2495,-518.44 2501,-512.44 2507,-512.44 2507,-512.44 2684.6,-512.44 2684.6,-512.44 2690.6,-512.44 2696.6,-518.44 2696.6,-524.44 2696.6,-524.44 2696.6,-589.72 2696.6,-589.72 2696.6,-595.72 2690.6,-601.72 2684.6,-601.72"/>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-582.28" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">EM Thermality — rebuilt</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-567.88" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">arXiv:2602.16765 [Feb 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-553.48" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Measure β^μ from E-B</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-539.08" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">cross-correlations</text>
+<text xml:space="preserve" text-anchor="middle" x="2595.8" y="-524.68" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">J. Physics G (under review)</text>
+</g>
+<!-- em_sixproofs&#45;&gt;em_rebuilt -->
+<g id="edge18" class="edge">
+<title>em_sixproofs-&gt;em_rebuilt</title>
+<path fill="none" stroke="#dc2626" d="M2595.8,-771.15C2595.8,-771.15 2595.8,-611.35 2595.8,-611.35"/>
+<polygon fill="#dc2626" stroke="#dc2626" points="2598.6,-611.35 2595.8,-603.35 2593,-611.35 2598.6,-611.35"/>
+<text xml:space="preserve" text-anchor="middle" x="2632.87" y="-683.56" font-family="Helvetica Neue" font-size="10.00">scrapped → rebuilt</text>
+</g>
+<!-- bh_genesis -->
+<g id="node15" class="node">
+<title>bh_genesis</title>
+<path fill="#fef3c7" stroke="#d97706" stroke-width="2.5" d="M1646,-853.48C1646,-853.48 1439.6,-853.48 1439.6,-853.48 1433.6,-853.48 1427.6,-847.48 1427.6,-841.48 1427.6,-841.48 1427.6,-776.2 1427.6,-776.2 1427.6,-770.2 1433.6,-764.2 1439.6,-764.2 1439.6,-764.2 1646,-764.2 1646,-764.2 1652,-764.2 1658,-770.2 1658,-776.2 1658,-776.2 1658,-841.48 1658,-841.48 1658,-847.48 1652,-853.48 1646,-853.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1542.8" y="-834.04" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">⚡ BH Entropy genesis</text>
+<text xml:space="preserve" text-anchor="middle" x="1542.8" y="-819.64" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">[Dec 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="1542.8" y="-805.24" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Root insight: entropy = ontic</text>
+<text xml:space="preserve" text-anchor="middle" x="1542.8" y="-790.84" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">limit on epistemological knowledge</text>
+<text xml:space="preserve" text-anchor="middle" x="1542.8" y="-776.44" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Unifies BH + Boltzmann + thermo</text>
+</g>
+<!-- empty_strings -->
+<g id="node19" class="node">
+<title>empty_strings</title>
+<path fill="#fef3c7" stroke="#d97706" stroke-width="2" d="M1250.6,-608.92C1250.6,-608.92 1073,-608.92 1073,-608.92 1067,-608.92 1061,-602.92 1061,-596.92 1061,-596.92 1061,-517.24 1061,-517.24 1061,-511.24 1067,-505.24 1073,-505.24 1073,-505.24 1250.6,-505.24 1250.6,-505.24 1256.6,-505.24 1262.6,-511.24 1262.6,-517.24 1262.6,-517.24 1262.6,-596.92 1262.6,-596.92 1262.6,-602.92 1256.6,-608.92 1250.6,-608.92"/>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-589.48" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Empty Strings — HELD</text>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-575.08" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">[Feb 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-560.68" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">1/4 = 2π/8π · String theory</text>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-546.28" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">imports normalization it claims</text>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-531.88" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">to derive · ~460 lines complete</text>
+<text xml:space="preserve" text-anchor="middle" x="1161.8" y="-517.48" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">"Not smart to publish yet"</text>
+</g>
+<!-- bh_genesis&#45;&gt;empty_strings -->
+<g id="edge21" class="edge">
+<title>bh_genesis-&gt;empty_strings</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1451.93,-763.09C1451.93,-703 1451.93,-605 1451.93,-605 1451.93,-605 1272.79,-605 1272.79,-605"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1272.79,-602.2 1264.79,-605 1272.79,-607.8 1272.79,-602.2"/>
+<text xml:space="preserve" text-anchor="middle" x="1344.29" y="-689.56" font-family="Helvetica Neue" font-size="10.00">complementary:</text>
+<text xml:space="preserve" text-anchor="middle" x="1344.29" y="-677.56" font-family="Helvetica Neue" font-size="10.00">right derivation</text>
+</g>
+<!-- bh_cqg1 -->
+<g id="node22" class="node">
+<title>bh_cqg1</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M1488.6,-601.72C1488.6,-601.72 1311,-601.72 1311,-601.72 1305,-601.72 1299,-595.72 1299,-589.72 1299,-589.72 1299,-524.44 1299,-524.44 1299,-518.44 1305,-512.44 1311,-512.44 1311,-512.44 1488.6,-512.44 1488.6,-512.44 1494.6,-512.44 1500.6,-518.44 1500.6,-524.44 1500.6,-524.44 1500.6,-589.72 1500.6,-589.72 1500.6,-595.72 1494.6,-601.72 1488.6,-601.72"/>
+<text xml:space="preserve" text-anchor="middle" x="1399.8" y="-582.28" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">BH Entropy → CQG</text>
+<text xml:space="preserve" text-anchor="middle" x="1399.8" y="-567.88" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Feb 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="1399.8" y="-553.48" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">First submission</text>
+<text xml:space="preserve" text-anchor="middle" x="1399.8" y="-539.08" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Davidson exchange Feb 17</text>
+<text xml:space="preserve" text-anchor="middle" x="1399.8" y="-524.68" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">(collegial review, not genesis)</text>
+</g>
+<!-- bh_genesis&#45;&gt;bh_cqg1 -->
+<g id="edge19" class="edge">
+<title>bh_genesis-&gt;bh_cqg1</title>
+<path fill="none" stroke="#aaaaaa" d="M1476.27,-762.96C1476.27,-762.96 1476.27,-611.32 1476.27,-611.32"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1479.07,-611.32 1476.27,-603.32 1473.47,-611.32 1479.07,-611.32"/>
+</g>
+<!-- geom_entropy -->
+<g id="node28" class="node">
+<title>geom_entropy</title>
+<path fill="#cffafe" stroke="#0891b2" d="M1658.6,-238.36C1658.6,-238.36 1481,-238.36 1481,-238.36 1475,-238.36 1469,-232.36 1469,-226.36 1469,-226.36 1469,-161.08 1469,-161.08 1469,-155.08 1475,-149.08 1481,-149.08 1481,-149.08 1658.6,-149.08 1658.6,-149.08 1664.6,-149.08 1670.6,-155.08 1670.6,-161.08 1670.6,-161.08 1670.6,-226.36 1670.6,-226.36 1670.6,-232.36 1664.6,-238.36 1658.6,-238.36"/>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-218.92" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Geometric Entropy branch</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-204.52" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[Apr 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-190.12" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Null geometry → cycles→trees</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-175.72" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Gibbs 1/N! geometric (γ=e)</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-161.32" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Davidson-Wolfson collaboration</text>
+</g>
+<!-- bh_genesis&#45;&gt;geom_entropy -->
+<g id="edge22" class="edge">
+<title>bh_genesis-&gt;geom_entropy</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1579.3,-763.11C1579.3,-763.11 1579.3,-248.02 1579.3,-248.02"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1582.1,-248.02 1579.3,-240.02 1576.5,-248.02 1582.1,-248.02"/>
+</g>
+<!-- bh_genesis&#45;&gt;entropy_epist -->
+<g id="edge23" class="edge">
+<title>bh_genesis-&gt;entropy_epist</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1659.05,-768C1688.27,-768 1711.5,-768 1711.5,-768 1711.5,-768 1711.5,-248.3 1711.5,-248.3"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1714.3,-248.3 1711.5,-240.3 1708.7,-248.3 1714.3,-248.3"/>
+</g>
+<!-- godel_track -->
+<g id="node16" class="node">
+<title>godel_track</title>
+<path fill="#f1f5f9" stroke="#64748b" d="M1102.6,-853.48C1102.6,-853.48 925,-853.48 925,-853.48 919,-853.48 913,-847.48 913,-841.48 913,-841.48 913,-776.2 913,-776.2 913,-770.2 919,-764.2 925,-764.2 925,-764.2 1102.6,-764.2 1102.6,-764.2 1108.6,-764.2 1114.6,-770.2 1114.6,-776.2 1114.6,-776.2 1114.6,-841.48 1114.6,-841.48 1114.6,-847.48 1108.6,-853.48 1102.6,-853.48"/>
+<text xml:space="preserve" text-anchor="middle" x="1013.8" y="-834.04" font-family="Helvetica Neue" font-size="12.00" fill="#334155">Gödel ↔ Physics ↔ Solipsism</text>
+<text xml:space="preserve" text-anchor="middle" x="1013.8" y="-819.64" font-family="Helvetica Neue" font-size="12.00" fill="#334155">[Dec 2025]</text>
+<text xml:space="preserve" text-anchor="middle" x="1013.8" y="-805.24" font-family="Helvetica Neue" font-size="12.00" fill="#334155">Draft complete (v10_FINAL)</text>
+<text xml:space="preserve" text-anchor="middle" x="1013.8" y="-790.84" font-family="Helvetica Neue" font-size="12.00" fill="#334155">NOT submitted · BJPS cover</text>
+<text xml:space="preserve" text-anchor="middle" x="1013.8" y="-776.44" font-family="Helvetica Neue" font-size="12.00" fill="#334155">draft only — parked</text>
+</g>
+<!-- godel_track&#45;&gt;empty_strings -->
+<g id="edge15" class="edge">
+<title>godel_track-&gt;empty_strings</title>
+<path fill="none" stroke="#64748b" d="M1087.8,-763.83C1087.8,-763.83 1087.8,-619.05 1087.8,-619.05"/>
+<polygon fill="#64748b" stroke="#64748b" points="1090.6,-619.05 1087.8,-611.05 1085,-619.05 1090.6,-619.05"/>
+<text xml:space="preserve" text-anchor="middle" x="1064.27" y="-689.56" font-family="Helvetica Neue" font-size="10.00">self-grounding</text>
+<text xml:space="preserve" text-anchor="middle" x="1064.27" y="-677.56" font-family="Helvetica Neue" font-size="10.00">prohibition → physics</text>
+</g>
+<!-- godel_track&#45;&gt;reality_wins -->
+<g id="edge16" class="edge">
+<title>godel_track-&gt;reality_wins</title>
+<path fill="none" stroke="#64748b" d="M946.8,-764.09C946.8,-764.09 946.8,-437.46 946.8,-437.46"/>
+<polygon fill="#64748b" stroke="#64748b" points="949.6,-437.46 946.8,-429.46 944,-437.46 949.6,-437.46"/>
+<text xml:space="preserve" text-anchor="middle" x="982.89" y="-560.08" font-family="Helvetica Neue" font-size="10.00">solipsism dissolution</text>
+<text xml:space="preserve" text-anchor="middle" x="982.89" y="-548.08" font-family="Helvetica Neue" font-size="10.00">→ AI epistemology</text>
+</g>
+<!-- demarcation&#45;&gt;empty_strings -->
+<g id="edge17" class="edge">
+<title>demarcation-&gt;empty_strings</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1213.3,-763.83C1213.3,-763.83 1213.3,-619.05 1213.3,-619.05"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1216.1,-619.05 1213.3,-611.05 1210.5,-619.05 1216.1,-619.05"/>
+<text xml:space="preserve" text-anchor="middle" x="1216.69" y="-683.56" font-family="Helvetica Neue" font-size="10.00">demarcation framework</text>
+</g>
+<!-- sunburst_mlst -->
+<g id="node26" class="node">
+<title>sunburst_mlst</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M230.6,-238.36C230.6,-238.36 53,-238.36 53,-238.36 47,-238.36 41,-232.36 41,-226.36 41,-226.36 41,-161.08 41,-161.08 41,-155.08 47,-149.08 53,-149.08 53,-149.08 230.6,-149.08 230.6,-149.08 236.6,-149.08 242.6,-155.08 242.6,-161.08 242.6,-161.08 242.6,-226.36 242.6,-226.36 242.6,-232.36 236.6,-238.36 230.6,-238.36"/>
+<text xml:space="preserve" text-anchor="middle" x="141.8" y="-218.92" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">SunBURST → MLST (IOP)</text>
+<text xml:space="preserve" text-anchor="middle" x="141.8" y="-204.52" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Apr 6, 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="141.8" y="-190.12" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">MLST-105368</text>
+<text xml:space="preserve" text-anchor="middle" x="141.8" y="-175.72" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Prior: Comp.Stat., JMLR</text>
+<text xml:space="preserve" text-anchor="middle" x="141.8" y="-161.32" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Under review</text>
+</g>
+<!-- sunburst_arxiv&#45;&gt;sunburst_mlst -->
+<g id="edge4" class="edge">
+<title>sunburst_arxiv-&gt;sunburst_mlst</title>
+<path fill="none" stroke="#aaaaaa" d="M180.8,-519.22C180.8,-519.22 180.8,-248.35 180.8,-248.35"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="183.6,-248.35 180.8,-240.35 178,-248.35 183.6,-248.35"/>
+</g>
+<!-- centipede -->
+<g id="node33" class="node">
+<title>centipede</title>
+<path fill="#cffafe" stroke="#0891b2" d="M386.6,-74.88C386.6,-74.88 209,-74.88 209,-74.88 203,-74.88 197,-68.88 197,-62.88 197,-62.88 197,-12 197,-12 197,-6 203,0 209,0 209,0 386.6,0 386.6,0 392.6,0 398.6,-6 398.6,-12 398.6,-12 398.6,-62.88 398.6,-62.88 398.6,-68.88 392.6,-74.88 386.6,-74.88"/>
+<text xml:space="preserve" text-anchor="middle" x="297.8" y="-55.44" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Centipede</text>
+<text xml:space="preserve" text-anchor="middle" x="297.8" y="-41.04" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[On hold]</text>
+<text xml:space="preserve" text-anchor="middle" x="297.8" y="-26.64" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">NUTS-guided SunBURST</text>
+<text xml:space="preserve" text-anchor="middle" x="297.8" y="-12.24" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">extension</text>
+</g>
+<!-- sunburst_arxiv&#45;&gt;centipede -->
+<g id="edge5" class="edge">
+<title>sunburst_arxiv-&gt;centipede</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M281.6,-519.29C281.6,-519.29 281.6,-84.6 281.6,-84.6"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="284.4,-84.6 281.6,-76.6 278.8,-84.6 284.4,-84.6"/>
+<text xml:space="preserve" text-anchor="middle" x="316.96" y="-281.56" font-family="Helvetica Neue" font-size="10.00">extension</text>
+</g>
+<!-- empty_strings_future -->
+<g id="node35" class="node">
+<title>empty_strings_future</title>
+<path fill="#fef3c7" stroke="#d97706" stroke-dasharray="5,2" d="M1236.6,-67.68C1236.6,-67.68 1059,-67.68 1059,-67.68 1053,-67.68 1047,-61.68 1047,-55.68 1047,-55.68 1047,-19.2 1047,-19.2 1047,-13.2 1053,-7.2 1059,-7.2 1059,-7.2 1236.6,-7.2 1236.6,-7.2 1242.6,-7.2 1248.6,-13.2 1248.6,-19.2 1248.6,-19.2 1248.6,-55.68 1248.6,-55.68 1248.6,-61.68 1242.6,-67.68 1236.6,-67.68"/>
+<text xml:space="preserve" text-anchor="middle" x="1147.8" y="-48.24" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Empty Strings — venue TBD</text>
+<text xml:space="preserve" text-anchor="middle" x="1147.8" y="-33.84" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">[When conditions change]</text>
+<text xml:space="preserve" text-anchor="middle" x="1147.8" y="-19.44" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">SHPMP / Foundations of Physics</text>
+</g>
+<!-- empty_strings&#45;&gt;empty_strings_future -->
+<g id="edge31" class="edge">
+<title>empty_strings-&gt;empty_strings_future</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M1131.8,-504.39C1131.8,-504.39 1131.8,-77.49 1131.8,-77.49"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1134.6,-77.49 1131.8,-69.49 1129,-77.49 1134.6,-77.49"/>
+<text xml:space="preserve" text-anchor="middle" x="1196.12" y="-281.56" font-family="Helvetica Neue" font-size="10.00">when conditions change</text>
+</g>
+<!-- horizon_first -->
+<g id="node21" class="node">
+<title>horizon_first</title>
+<path fill="#ede9fe" stroke="#7c3aed" d="M2134.6,-594.52C2134.6,-594.52 1957,-594.52 1957,-594.52 1951,-594.52 1945,-588.52 1945,-582.52 1945,-582.52 1945,-531.64 1945,-531.64 1945,-525.64 1951,-519.64 1957,-519.64 1957,-519.64 2134.6,-519.64 2134.6,-519.64 2140.6,-519.64 2146.6,-525.64 2146.6,-531.64 2146.6,-531.64 2146.6,-582.52 2146.6,-582.52 2146.6,-588.52 2140.6,-594.52 2134.6,-594.52"/>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-575.08" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Horizon Thermality — genesis</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-560.68" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">[Feb 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-546.28" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">"Hawking as coordinate mismatch"</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-531.88" font-family="Helvetica Neue" font-size="12.00" fill="#3b0764">Written between air-raid sirens</text>
+</g>
+<!-- horizon_prl -->
+<g id="node23" class="node">
+<title>horizon_prl</title>
+<path fill="#dbeafe" stroke="#2563eb" d="M2134.6,-420.04C2134.6,-420.04 1957,-420.04 1957,-420.04 1951,-420.04 1945,-414.04 1945,-408.04 1945,-408.04 1945,-342.76 1945,-342.76 1945,-336.76 1951,-330.76 1957,-330.76 1957,-330.76 2134.6,-330.76 2134.6,-330.76 2140.6,-330.76 2146.6,-336.76 2146.6,-342.76 2146.6,-342.76 2146.6,-408.04 2146.6,-408.04 2146.6,-414.04 2140.6,-420.04 2134.6,-420.04"/>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-400.6" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Horizon Thermality → PRL</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-386.2" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">[Mar 16, 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-371.8" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">Brustein exchange same day:</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-357.4" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">"Hawking is physical, not just</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-343" font-family="Helvetica Neue" font-size="12.00" fill="#1e3a8a">a coord change." No impact.</text>
+</g>
+<!-- horizon_first&#45;&gt;horizon_prl -->
+<g id="edge28" class="edge">
+<title>horizon_first-&gt;horizon_prl</title>
+<path fill="none" stroke="#aaaaaa" d="M2045.8,-519.44C2045.8,-519.44 2045.8,-429.89 2045.8,-429.89"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2048.6,-429.89 2045.8,-421.89 2043,-429.89 2048.6,-429.89"/>
+</g>
+<!-- bh_cqg_r1 -->
+<g id="node27" class="node">
+<title>bh_cqg_r1</title>
+<path fill="#dcfce7" stroke="#16a34a" stroke-width="2.5" d="M1421,-231.16C1421,-231.16 1214.6,-231.16 1214.6,-231.16 1208.6,-231.16 1202.6,-225.16 1202.6,-219.16 1202.6,-219.16 1202.6,-168.28 1202.6,-168.28 1202.6,-162.28 1208.6,-156.28 1214.6,-156.28 1214.6,-156.28 1421,-156.28 1421,-156.28 1427,-156.28 1433,-162.28 1433,-168.28 1433,-168.28 1433,-219.16 1433,-219.16 1433,-225.16 1427,-231.16 1421,-231.16"/>
+<text xml:space="preserve" text-anchor="middle" x="1317.8" y="-211.72" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">🟢 BH Entropy — CQG-115204.R1</text>
+<text xml:space="preserve" text-anchor="middle" x="1317.8" y="-197.32" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">[Apr 9, 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="1317.8" y="-182.92" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">BOTH referees recommend pub.</text>
+<text xml:space="preserve" text-anchor="middle" x="1317.8" y="-168.52" font-family="Helvetica Neue" font-size="12.00" fill="#14532d">Awaiting editorial decision.</text>
+</g>
+<!-- bh_cqg1&#45;&gt;bh_cqg_r1 -->
+<g id="edge20" class="edge">
+<title>bh_cqg1-&gt;bh_cqg_r1</title>
+<path fill="none" stroke="#aaaaaa" d="M1343.67,-512.16C1343.67,-512.16 1343.67,-241.7 1343.67,-241.7"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1346.47,-241.7 1343.67,-233.7 1340.87,-241.7 1346.47,-241.7"/>
+</g>
+<!-- horizon_grg -->
+<g id="node25" class="node">
+<title>horizon_grg</title>
+<path fill="#fef3c7" stroke="#d97706" stroke-width="2" d="M2134.6,-238.36C2134.6,-238.36 1957,-238.36 1957,-238.36 1951,-238.36 1945,-232.36 1945,-226.36 1945,-226.36 1945,-161.08 1945,-161.08 1945,-155.08 1951,-149.08 1957,-149.08 1957,-149.08 2134.6,-149.08 2134.6,-149.08 2140.6,-149.08 2146.6,-155.08 2146.6,-161.08 2146.6,-161.08 2146.6,-226.36 2146.6,-226.36 2146.6,-232.36 2140.6,-238.36 2134.6,-238.36"/>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-218.92" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Horizon Thermality → GRG</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-204.52" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">[Apr 3, 2026]</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-190.12" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Desk-rejected Apr 9</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-175.72" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">Poisson/Israel 1976 objection</text>
+<text xml:space="preserve" text-anchor="middle" x="2045.8" y="-161.32" font-family="Helvetica Neue" font-size="12.00" fill="#78350f">⚠ GATED on BH Entropy CQG</text>
+</g>
+<!-- horizon_prl&#45;&gt;horizon_grg -->
+<g id="edge29" class="edge">
+<title>horizon_prl-&gt;horizon_grg</title>
+<path fill="none" stroke="#aaaaaa" d="M2079.4,-330.49C2079.4,-330.49 2079.4,-248.57 2079.4,-248.57"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="2082.2,-248.57 2079.4,-240.57 2076.6,-248.57 2082.2,-248.57"/>
+</g>
+<!-- solipsism -->
+<g id="node32" class="node">
+<title>solipsism</title>
+<path fill="#cffafe" stroke="#0891b2" d="M968.6,-74.88C968.6,-74.88 791,-74.88 791,-74.88 785,-74.88 779,-68.88 779,-62.88 779,-62.88 779,-12 779,-12 779,-6 785,0 791,0 791,0 968.6,0 968.6,0 974.6,0 980.6,-6 980.6,-12 980.6,-12 980.6,-62.88 980.6,-62.88 980.6,-68.88 974.6,-74.88 968.6,-74.88"/>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-55.44" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Solipsism paper</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-41.04" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[Conceptual stage]</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-26.64" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Target: BJPS</text>
+<text xml:space="preserve" text-anchor="middle" x="879.8" y="-12.24" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Downstream from Reality Wins</text>
+</g>
+<!-- reality_wins&#45;&gt;solipsism -->
+<g id="edge30" class="edge">
+<title>reality_wins-&gt;solipsism</title>
+<path fill="none" stroke="#aaaaaa" stroke-dasharray="5,2" d="M879.8,-322.59C879.8,-322.59 879.8,-84.74 879.8,-84.74"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="882.6,-84.74 879.8,-76.74 877,-84.74 882.6,-84.74"/>
+</g>
+<!-- bh_cqg_r1&#45;&gt;horizon_grg -->
+<g id="edge24" class="edge">
+<title>bh_cqg_r1-&gt;horizon_grg</title>
+<path fill="none" stroke="#16a34a" stroke-width="2.5" d="M1388.33,-232.23C1388.33,-237.97 1388.33,-242 1388.33,-242 1388.33,-242 2012.2,-242 2012.2,-242 2012.2,-242 2012.2,-241.71 2012.2,-241.71"/>
+<polygon fill="#16a34a" stroke="#16a34a" stroke-width="2.5" points="2015,-250.91 2012.2,-242.91 2009.4,-250.91 2015,-250.91"/>
+<text xml:space="preserve" text-anchor="middle" x="1623.8" y="-281.56" font-family="Helvetica Neue" font-size="10.00">GATES resubmission</text>
+</g>
+<!-- cosmo_const -->
+<g id="node34" class="node">
+<title>cosmo_const</title>
+<path fill="#cffafe" stroke="#0891b2" d="M1658.6,-67.68C1658.6,-67.68 1481,-67.68 1481,-67.68 1475,-67.68 1469,-61.68 1469,-55.68 1469,-55.68 1469,-19.2 1469,-19.2 1469,-13.2 1475,-7.2 1481,-7.2 1481,-7.2 1658.6,-7.2 1658.6,-7.2 1664.6,-7.2 1670.6,-13.2 1670.6,-19.2 1670.6,-19.2 1670.6,-55.68 1670.6,-55.68 1670.6,-61.68 1664.6,-67.68 1658.6,-67.68"/>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-48.24" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">Cosmological Constant +</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-33.84" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">de Sitter Static Patch</text>
+<text xml:space="preserve" text-anchor="middle" x="1569.8" y="-19.44" font-family="Helvetica Neue" font-size="12.00" fill="#164e63">[Downstream · emerging]</text>
+</g>
+<!-- geom_entropy&#45;&gt;cosmo_const -->
+<g id="edge25" class="edge">
+<title>geom_entropy-&gt;cosmo_const</title>
+<path fill="none" stroke="#aaaaaa" d="M1569.8,-148.94C1569.8,-148.94 1569.8,-77.39 1569.8,-77.39"/>
+<polygon fill="#aaaaaa" stroke="#aaaaaa" points="1572.6,-77.39 1569.8,-69.39 1567,-77.39 1572.6,-77.39"/>
+</g>
+</g>
+</svg>
