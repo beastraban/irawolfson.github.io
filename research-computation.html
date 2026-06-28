@@ -59,9 +59,11 @@
         <div class="publication">
           <div class="publication-title">ChiSao: A GPU-Native Parallel Optimizer for Multimodal Black-Box Functions</div>
           <div class="publication-meta">I. Wolfson — 2026</div>
-          <p>ChiSao (Convergence–Halt–Invert–Stick–And–Oscillate, named for the Wing Chun "sticky hands" drill) is a GPU-native population optimizer that runs an entire sample batch at once and rides a deliberate convergence–anticonvergence oscillation to escape local traps while freezing confirmed modes. Samples that reach true peaks are frozen ("stuck"); the rest keep exploring via momentum-based anti-convergence and stochastically smoothed gradients, with adaptive reseeding (Repulse Monkey, Golden Rooster) preserving diversity. Across all 42 Simon Fraser University benchmark functions through d=64 it achieves 100% mode recovery — where CPU baselines (basin-hopping, CMA-ES, multistart) collapse at d≥8 — at up to 34× speedup over basin-hopping and 39× on unimodal functions, and stays fully reliable under likelihood noise up to σ=1.0. A sibling to SunBURST, aimed at optimization rather than Bayesian evidence. Open-source via <code>sunburst-bayes</code> on PyPI.</p>
+          <p>ChiSao (Convergence–Halt–Invert–Stick–And–Oscillate, named for the Wing Chun "sticky hands" drill) is a GPU-native population optimizer that runs an entire sample batch at once and rides a deliberate convergence–anticonvergence oscillation to escape local traps while freezing confirmed modes. Samples that reach true peaks are frozen ("stuck"); the rest keep exploring via momentum-based anti-convergence and stochastically smoothed gradients, with adaptive reseeding (Repulse Monkey, Golden Rooster) preserving diversity. Across all 42 Simon Fraser University benchmark functions through d=64 it achieves 100% mode recovery — where CPU baselines (basin-hopping, CMA-ES, multistart) collapse at d≥8 — at up to 34× speedup over basin-hopping and 39× on unimodal functions, and stays fully reliable under likelihood noise up to σ=1.0. A sibling to SunBURST, aimed at optimization rather than Bayesian evidence. Open-source via <code>chisao</code> on PyPI.</p>
           <div class="publication-links">
-            <em>Draft — targeting Journal of Computational and Graphical Statistics</em>
+            <a href="https://arxiv.org/abs/2606.26164">arXiv:2606.26164</a>
+            <a href="https://github.com/beastraban/chisao">GitHub</a>
+            <em>Under review — Swarm and Evolutionary Computation</em>
           </div>
         </div>
 
