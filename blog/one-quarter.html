@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why One-Quarter? — Entropically Yours</title>
+<meta name="description" content="A factor of 1/4 that has haunted me since I was a student, what it is actually hiding, and the clean answer I refused to stop wanting. Oh, and spot the gerbil.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+
+/* ── EQUATION FLAGS & DISPLAY ── */
+.eqn-flag{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--accent);text-align:center;margin:2.2rem 0 0.4rem;}
+.equation{text-align:center;margin:1.2rem 0 0.4rem;font-size:1.05rem;overflow-x:auto;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:640px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── BOX FIGURE ── */
+.boxfig{margin:3rem auto;text-align:center;max-width:280px;}
+.boxfig img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.boxfig figcaption{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);padding-top:1rem;line-height:1.5;}
+.boxcredit{font-family:'DM Mono',monospace;font-style:normal;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint);}
+.boxcredit a{color:inherit;text-decoration:underline;}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── FOOTNOTES ── */
+.footnotes{margin-top:4rem;padding-top:1.8rem;border-top:2px solid var(--ink);}
+.footnotes h3{margin-top:0;margin-bottom:1.2rem;}
+.footnotes ol{padding-left:1.4rem;}
+.footnotes li{font-size:0.88rem;color:var(--ink-light);line-height:1.6;margin-bottom:0.8rem;}
+.footnotes li a{color:var(--ink-light);}
+sup a{color:var(--accent);text-decoration:none;font-family:'DM Mono',monospace;font-size:0.7rem;}
+sup a:hover{text-decoration:underline;}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Gravitation &amp; Thermodynamics</div>
+    <h1>Why One-Quarter? The Most Famous Number in Black-Hole Physics Is a Coin Flip &mdash; Twice</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; July 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> A factor of &frac14; that has haunted me since I was a student, what it is actually hiding, and the clean answer I refused to stop wanting. Oh, and spot the gerbil.</div>
+  </header>
+
+  <p>I was always the one person in the room who wanted to actually understand what the professor was droning about. And for the most part, I was (still am) also highly suspicious of hand-waving arguments and the &#x2018;proof by intimidation&#x2019; practice. So much so, in fact, that in the second year of my bachelor&#x2019;s in physics and computer science, when they taught us thermodynamics as the black magic that it is, it drove me to add a mathematics major.</p>
+
+  <p>So it shouldn&#x2019;t come as a surprise that when I was introduced to the &frac14; coefficient in the black hole entropy formula, I was suspicious.</p>
+
+  <p>But maybe I should first tell you what that is. When you throw a baseball up, it usually comes down &mdash; except on Tuesdays, Tuesdays are rough. But it is possible to throw a baseball so hard that it escapes Earth&#x2019;s gravity, never to come back. Think of Superman as a pitcher. We eggheads call that velocity &#x2018;escape velocity&#x2019;. Formally, it&#x2019;s the velocity required for an object to continue to travel to an infinite distance from Earth, while taking into account that gravity always decelerates the object.</p>
+
+  <figure class="lead-image">
+    <img src="superman-baseball.png"
+         alt="Golden-Age Superman splash page: Superman flying, catching a baseball, over a caption about baseball being America's favorite sport"
+         loading="lazy">
+    <figcaption>Not a pitcher here, but close enough &mdash; catch it fast enough and it never lands.<br>&#x201C;Superman&#x201D; by Jerry Siegel and Joe Shuster, DC Comics (Golden Age). &nbsp;&middot;&nbsp; &copy; DC Comics, shown for commentary.</figcaption>
+  </figure>
+
+  <p>Turns out, this escape velocity is dependent on the mass of the object you&#x2019;re trying to escape. So, there might be objects massive enough to necessitate an escape velocity faster than light. But we already knew that about 250 years ago.</p>
+
+  <p>However, it took Einstein publishing his theory of general relativity, and Karl Schwarzschild having the balls to point out that there is a valid mathematical solution in which space-time is &#x2018;ripped&#x2019; to arrive at the modern idea of black holes.</p>
+
+  <p>Since information travels at the speed of light, this means that for us, who live on the outside of a black hole, information coming from the inside of the black hole is simply not available. It doesn&#x2019;t mean that it is not there. Supposedly, there IS something on the inside; it&#x2019;s just that we can&#x2019;t get any information from the inside.</p>
+
+  <figure class="boxfig">
+    <img src="Tardis_BBC_Television_Center_(cropped).jpg" alt="A blue police public call box in the style of the Doctor Who TARDIS" loading="lazy">
+    <figcaption>It&#x2019;s bigger on the inside.<br><span class="boxcredit">Photo: Babbel1996, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>, via Wikimedia Commons.</span></figcaption>
+  </figure>
+
+  <p>Black holes are magical. In the sense that they are fascinating, and that we don&#x2019;t really understand them fully. They are also beautiful mathematically, but that may just be me.</p>
+
+  <p>But, back to information. And entropy. Because, grudgingly, we need to discuss entropy.</p>
+
+  <p>The simplest way to understand entropy is as the limit of what you can say for sure, given the information available to you. For instance, suppose you have 4 coins. You can only look at 3 coins. They are all heads. Someone tells you that any two of the four always match. While you directly observe only 3 coins, you can assert that the last coin is also heads. So entropy is zero in that case. You know everything that CAN be known about the system (in that context). However, suppose you don&#x2019;t get that second piece of information. Now you have a free coin that can either be heads or tails. Entropy is now greater than zero, because you can be certain of less than before.</p>
+
+  <p>In the 1970&#x2019;s, Jacob Bekenstein (whom I&#x2019;ve had the privilege of studying under, and was one of the sweetest people I&#x2019;ve ever met), came up with the idea of black hole thermodynamics and found that the entropy of a black hole is proportional to its surface area.</p>
+
+  <div class="eqn-flag">&lt;Warning! Equations ahead!&gt;</div>
+  <div class="equation">\[ S = \frac{1}{4}\,\frac{k_{B} A}{\ell_{p}^{2}} \]</div>
+  <p>in which \(k_{B}\) is the Boltzmann constant, \(A\) is the surface area of the black hole, and \(\ell_{p}\) is Planck&#x2019;s length.</p>
+  <div class="eqn-flag">&lt;/Ok, enough equations for now...&gt;</div>
+
+  <p>So if you look at the formula (ha! made you look!), we have physical quantities, but the &frac14; coefficient, where did that come from? (&#x2018;Who ordered that?!&#x2019;).</p>
+
+  <p>Why four? Why not three, why not &pi;? I went at it for years, from every side I could find a door to: information theory, chaos and mixing, state-counting, coarse-graining. Every route could be <em>made</em> to arrive at the four. None of them told me <em>why</em> it had to be there. What I wanted &mdash; what I never quite stopped wanting &mdash; was a clean explanation. Not a derivation you have to be walked through with both hands, ornate enough that you mistake the effort for depth. Something you could see in a single breath and then not be able to un-see.</p>
+
+  <p>And the standard way of &#x201C;explaining&#x201D; it is exactly the kind of thing that never satisfied me. For half a century, you first pick a theory of what a black hole is secretly made of &mdash; tiny vibrating strings, or woven loops of space, or a hologram smeared on the horizon &mdash; count the microscopic states that theory allows, and check that the count reproduces <em>A/4.</em> When it does, everyone cheers. But look closely at what just happened. You assumed what the black hole is made of, tuned a knob until the famous number fell out, and called the tuning an explanation. Every such derivation <em>begins</em> by naming the stuff inside. The one-quarter is never derived. It is matched.</p>
+
+  <p>Well, I&#x2019;m being MOSTLY right here, after all, the first time &frac14; appeared was due to Hawking&#x2019;s formulation, which didn&#x2019;t rely on a tunable knob. In his formulation, he used quantum field theory and general relativity to get the &frac14; coefficient. This has its own set of problems, but not nearly as theoretical as assuming we know what a black hole is made of.</p>
+
+  <p>Anyway, this always struck me as looking in precisely the wrong place. We keep hunting for the factor in what the horizon <em>contains.</em> What if it was never about the contents at all &mdash; what if the one-quarter is a statement about an <em>absence</em>, about what a horizon, by its sheer geometry, refuses to let you have?</p>
+
+  <p>Consider the Earth. Every point on the span we live in can be described as a combination of 3 numbers: Longitude, Latitude, and Altitude &mdash; <em>(Long, Lat, Alt)</em>. Now, if we add a constraint, such as &#x2018;the longitude and latitude always have to be summed to zero&#x2019;, one coordinate becomes superfluous because now you only need to supply <em>(Long, &minus;Long, Alt)</em>, or more succinctly &mdash; <em>(Long, Alt)</em>. This traces out a 2D surface embedded in the 3D volume.</p>
+
+  <p>Now take this to 4 dimensions. It&#x2019;s exactly the same. If we supply a condition such as, say, energy conservation<sup><a href="#fn1" id="ref1">1</a></sup>, the 3 spatial dimensions plus 1 temporal are reduced to 2 spatial plus 1 temporal.</p>
+
+  <p>Now, on an event horizon (the cusp that differentiates between what we can in principle see and what we can never see under any conditions), time is frozen. Formally, this is a bit complex, but a good way to think about it is, if you move at the speed of light, everything freezes in comparison.</p>
+
+  <p>So, now we are left with only 2 spatial dimensions, which means the ledger now has only 4 slots. Up to now, everything, however involved, was a run-of-the-mill physics derivation. We naively expect 4 live directions, and I&#x2019;ll show you that only one of them is really accessible.</p>
+
+  <p>Let&#x2019;s take a slight detour and go back to baseball pitches.</p>
+
+  <p>When the ball leaves the pitcher&#x2019;s hand, its trajectory, the path it moves in, is completely specified. It is a specific correlation between the distance from the pitcher and the location of the ball. Unless something truly weird happens (usually on a Tuesday), a curveball will trace a curve, and a fastball will shoot directly to the umpire&#x2019;s crotch (ouch).</p>
+
+  <p>In physics, this is known as initial conditions. And once you specify the initial conditions and the system, you don&#x2019;t need time to know what the trajectory is. It&#x2019;s just some curved line, and the initial conditions specify WHICH line.</p>
+
+  <p>On the black hole, there IS no time, so we are pressed into looking ONLY at trajectories. This is called &#x2018;conscripted time&#x2019;, or &#x2018;dressing time&#x2019;. So now, a line is only 1-dimensional, and so we have only 2 slots remaining. Now we have to consider what time does. It dictates the direction of flow. Specifically, it divides between things that go into the future and things that go into the past. However, in this case, we are privy only to things that go into the future. Things that should go into the past are hidden behind the horizon.</p>
+
+  <p>To sum up, we started thinking we have 4 slots, and ended up understanding that we actually only have enough information to account for 1 slot. This is the &frac14; coefficient.</p>
+
+  <p>I have taken to calling it <em>the causal quartering.</em> The horizon charges you a toll twice &mdash; once to run its clock, once because it only opens one way &mdash; and the toll, both times, is exactly half. The celebrated \( S = \dfrac{k_{B} A}{4\,\ell_{P}^{2}} \) is not hiding a microscopic secret. It is bookkeeping at a two-gate tollbooth, and the geometry of four-dimensional spacetime sets the price.</p>
+
+  <p>Notice what did not go into that. No Einstein equations (because most of you would void your stomachs at the sight). No model of the interior (because no one actually knows &mdash; that&#x2019;s the whole spiel!). It comes out the same whether the true theory of gravity turns out to be strings or loops or something nobody has dreamed up yet, because it never asks. It asks only what a one-way surface of light, in four dimensions, will geometrically permit an observer to know.</p>
+
+  <p>Maybe more ludicrous, but absolutely magnificent, is the fact that this analysis is true for every event horizon, regardless of whether we are on the inside or the outside of it. The causal quartering works for <em>any</em> horizon. And the kicker is that we <em>do</em> sit inside one. Our universe expands fast enough that there are regions whose light will never reach us, no matter how long we wait. That boundary is the <em>cosmological event horizon</em> &mdash; and it is <em>not</em> the edge of the observable universe, nor the cosmic microwave background. That last-scattering surface is just where <em>light</em> happened to break free; probe with gravitational waves, and you&#x2019;d see clean through it, almost to the Planck instant. The light curtain is the shallowest screen there is, not a wall. The event horizon is the wall &mdash; and it doesn&#x2019;t care what you look with. Light, gravity, neutrinos: all ride the same light cones, all stop at the same boundary. And that boundary has an entropy of its own, every bit of it divided by &mdash; of course &mdash; the very same &frac14;. Mind = blown.</p>
+
+  <p>Make it concrete, because the number is the joke. A black hole the mass of the Sun has an entropy of roughly ten to the seventy-seventh &mdash; a count with seventy-seven zeroes after it, more bits than there are atoms in a respectable stretch of the galaxy. And every last one of those bits is multiplied by a coefficient that is, once you scrape off fifty years of decoration, one-half times one-half. The most colossal entropy in nature rides on a coin flipped twice. I find this almost unbearably satisfying, and I am aware that this says something about me.</p>
+
+  <div class="pull">So &mdash; why four?</div>
+
+  <p>Because I say so<sup><a href="#fn2" id="ref2">2</a></sup>, and I&#x2019;m smart. No. Not really.</p>
+
+  <p>It simply reflects the gap between what we think we may know and the fraction of information that is actually accessible.</p>
+
+  <p>So the student who asked where that &frac14; came from found out that the answer is far simpler than it was made out to be. It&#x2019;s all about what any possible observer can and can&#x2019;t know.</p>
+
+  <div class="section-dinkus">&#x2014; &#x25C6; &#x2014;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist and Senior Lecturer at Braude College of Engineering, Israel. His research spans gravitation, thermodynamics, philosophy of science, and the odd gerbil. The full technical paper, &#x201C;On a geometric interpretation of the 1/4 factor in black hole entropy,&#x201D; is published (open access) in <em>Classical and Quantum Gravity</em>: <a href="https://doi.org/10.1088/1361-6382/ae7fe8">doi.org/10.1088/1361-6382/ae7fe8</a>.</p>
+
+  <div class="footnotes">
+    <h3>Notes</h3>
+    <ol>
+      <li id="fn1">This is NOT the actual constraint, but it&#x2019;s a good example. <a href="#ref1">&#x21A9;</a></li>
+      <li id="fn2">Apparently, there is a term for this in legalese &mdash; &#x2018;Ipse dixit&#x2019;, which is the last stand of every tired parent: &#x2018;because I say so!&#x2019; <a href="#ref2">&#x21A9;</a></li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
