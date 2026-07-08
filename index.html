@@ -10,6 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .intro { display: flex; align-items: flex-start; gap: 1.75rem; }
+    .intro-text { flex: 1; min-width: 0; }
+    .headshot {
+      flex-shrink: 0;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      border: 3px solid var(--color-bg-alt);
+    }
+    @media (max-width: 640px) {
+      .intro { flex-direction: column; align-items: center; text-align: center; }
+      .headshot { width: 160px; height: 160px; }
+    }
+  </style>
 <script data-goatcounter="https://irawolfson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -42,13 +59,16 @@
     <main class="main-content">
       <article class="page-content">
         <div class="intro">
-          <p class="intro-lead">
-            I'm a physicist exploring the boundaries between computation, epistemology, and fundamental physics.
-          </p>
-          
-          <p>
-            Currently a Senior Lecturer in Electrical Engineering at <a href="https://www.braude.ac.il/">Braude Academic College of Engineering</a> in Israel, I teach electromagnetic theory, transmission lines, and MATLAB programming while pursuing research across cosmology, Bayesian epistemology, thermodynamics, and the ethics of AI consciousness.
-          </p>
+          <img src="assets/images/ira_HeadShot_sea.jpg" alt="Ira Wolfson" class="headshot">
+          <div class="intro-text">
+            <p class="intro-lead">
+              I'm a physicist exploring the boundaries between computation, epistemology, and fundamental physics.
+            </p>
+
+            <p>
+              Currently a Senior Lecturer in Electrical Engineering at <a href="https://www.braude.ac.il/">Braude Academic College of Engineering</a> in Israel, I teach electromagnetic theory, transmission lines, and MATLAB programming while pursuing research across cosmology, Bayesian epistemology, thermodynamics, and the ethics of AI consciousness.
+            </p>
+          </div>
         </div>
 
         <h2>Research Focus</h2>

@@ -10,6 +10,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .partners-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+      justify-content: center;
+      margin: var(--space-lg) 0 var(--space-xl);
+    }
+    .partner-card {
+      flex: 1 1 220px;
+      max-width: 300px;
+      min-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-lg);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .partner-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+    }
+    .partner-card img {
+      max-width: 100%;
+      max-height: 56px;
+      width: auto;
+      height: auto;
+    }
+    .partner-dark {
+      background: #12232e;
+      border-color: #12232e;
+    }
+  </style>
 <script data-goatcounter="https://irawolfson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -42,19 +79,36 @@
     
     <main class="main-content">
       <article class="page-content">
-        <div class="coming-soon">
-          <img src="assets/images/science-service-logo.png" alt="Science! At Your Service">
-          
-          <span class="coming-soon-badge">Coming Soon</span>
-          
-          <p style="max-width: 32rem; margin: 0 auto 2rem; color: var(--color-text-muted); font-size: 1.1rem;">
+        <div style="text-align: center; margin-bottom: var(--space-xl);">
+          <img src="assets/images/science-service-logo.png" alt="Science! At Your Service" style="max-width: 280px; margin-bottom: var(--space-md);">
+          <p style="max-width: 34rem; margin: 0 auto; color: var(--color-text-muted); font-size: 1.15rem;">
             Scientific expertise available for collaboration, consultation, and commissioned research.
           </p>
-          
-          <p style="max-width: 28rem; margin: 0 auto;">
-            Interested? <a href="contact.html">Get in touch</a> to discuss how we might work together.
-          </p>
         </div>
+
+        <h2>How I can help</h2>
+        <p>
+          I work with companies and research groups on hard quantitative problems — from
+          quantum information and error correction to scientific computation, modeling, and
+          the interpretation of complex data. Engagements range from focused consultations to
+          longer research collaborations and commissioned analysis.
+        </p>
+
+        <h2>Selected partners &amp; affiliations</h2>
+        <p>Organizations I currently work with or advise:</p>
+
+        <div class="partners-strip">
+          <a class="partner-card partner-dark" href="https://quantumxlabs.xyz/" target="_blank" rel="noopener">
+            <img src="assets/images/qxl-logo.svg" alt="Quantum X Labs (QXL)">
+          </a>
+          <a class="partner-card" href="https://www.clalit.co.il/" target="_blank" rel="noopener">
+            <img src="assets/images/clalit-logo.svg" alt="Clalit Health Services">
+          </a>
+        </div>
+
+        <p style="text-align: center; margin-top: var(--space-xl);">
+          Interested in working together? <a href="contact.html">Get in touch</a> to discuss how we might collaborate.
+        </p>
       </article>
     </main>
     
