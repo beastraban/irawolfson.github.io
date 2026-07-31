@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Actually In physics.gen-ph &mdash; Entropically Yours</title>
+<meta name="description" content="I spent an afternoon with the arXiv API asking whether the general-physics category is a junk drawer. It isn't, quite. It's something stranger, and the giveaway is a date.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+strong{font-weight:600;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+a:hover{border-bottom-color:var(--accent);}
+code{font-family:'DM Mono',monospace;font-size:0.84em;background:var(--paper-warm);padding:0.08em 0.36em;border-radius:3px;color:var(--ink-mid);}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:660px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Metascience</div>
+    <h1>What Is Actually In physics.gen-ph</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; July 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> I spent an afternoon with the arXiv API asking whether the general-physics category is a junk drawer. It isn&#x2019;t, quite. It&#x2019;s something stranger, and the giveaway is a date.</div>
+  </header>
+
+  <p>Everyone in physics knows what <code>physics.gen-ph</code> is for, in the way everyone knows things nobody has checked. It&#x2019;s the general-physics category, and it functions as a soft landing: arXiv&#x2019;s moderators don&#x2019;t reject your paper, they file it somewhere nobody looks. Perpetual motion, one-page proofs that Einstein was wrong, the usual.</p>
+
+  <figure class="lead-image">
+    <img src="gen-ph-warehouse.png"
+         alt="An immense dim warehouse of identical wooden crates receding into the dark; a single crate sits in a shaft of light, stamped &ldquo;GEN-PH &middot; UNCLASSIFIED &middot; DO NOT INDEX.&rdquo;"
+         loading="lazy">
+    <figcaption>The general-physics stacks, as I picture them: nothing is thrown out, only filed &mdash; and stamped so no one goes looking.<br>AI-generated illustration.</figcaption>
+  </figure>
+
+  <p>That&#x2019;s the folklore. I wanted the number.</p>
+
+  <p><strong>Disclosure, so you can weight what follows.</strong> I have a paper sitting in gen-ph. I have opinions about how it got there, and I&#x2019;ll write about that separately. This post is about the corpus, not about me &mdash; and I&#x2019;ve published the scripts and the raw data at the bottom so you can run it without taking my word for anything.</p>
+
+  <h2>The method</h2>
+
+  <p>arXiv&#x2019;s metadata carries a <code>journal-ref</code> field. If a preprint later appears in a journal, the author can record it there &mdash; and many never bother, so it&#x2019;s a floor rather than a count. But the floor sits at the same height for everyone, which makes comparisons between categories meaningful even when the absolute number isn&#x2019;t.</p>
+
+  <p>I took every gen-ph and every gr-qc paper submitted between 2020 and 2022. Not a sample &mdash; the complete census: 869 papers and 17,897 papers respectively. Then I asked three questions.</p>
+
+  <h2>Number one: do they get published?</h2>
+
+  <p>Yes, and this surprised me.</p>
+
+  <p><strong>44.6%</strong> of gen-ph papers acquire a journal reference. For gr-qc it&#x2019;s <strong>51.8%</strong>.</p>
+
+  <p>If gen-ph were the junk drawer of folklore, that figure should be in the single digits. Nearly half of what lands there is subsequently published somewhere by somebody. Whatever the routing is detecting, it isn&#x2019;t unpublishability.</p>
+
+  <h2>Number two: where do they publish?</h2>
+
+  <p>Here the folklore recovers.</p>
+
+  <p>Of papers that publish, the share reaching the field&#x2019;s flagship venues &mdash; <em>Physical Review D</em> and <em>Letters</em>, <em>Classical and Quantum Gravity</em>, <em>JHEP</em>, <em>JCAP</em>, <em>Physics Letters B</em>, <em>MNRAS</em>, <em>ApJ</em> &mdash; is <strong>56.2%</strong> for gr-qc and <strong>4.9%</strong> for gen-ph. Elevenfold. MDPI-family journals run the other direction, 11.6% against 5.2%.</p>
+
+  <p>So the honest one-line summary is that gen-ph routing barely predicts <em>whether</em> your work survives peer review, and strongly predicts <em>where</em> it lands.</p>
+
+  <p>Which is a good result for the moderators, and I want to put their case as strongly as they would: gen-ph papers publish, but not where it counts, and that is precisely what you&#x2019;d expect if the routing tracks something real about quality.</p>
+
+  <p>It might. But notice that from outside you cannot tell which way the arrow points. A paper in gen-ph is unread, and unread work doesn&#x2019;t reach flagship journals. So the routing could be diagnosing the outcome or producing it. Prophecy and diagnosis are indistinguishable without the counterfactual, and the only party holding the data that would separate them is the party under evaluation.</p>
+
+  <p>I can&#x2019;t resolve that. But there&#x2019;s a third measurement that constrains it.</p>
+
+  <h2>Number three: which came first?</h2>
+
+  <p>Normal scholarly order is preprint, then journal. You post to arXiv, then you submit, then months later it appears. The reverse ordering &mdash; arXiv deposit <em>after</em> journal publication &mdash; is rare, and it&#x2019;s a fingerprint of a specific route: the author didn&#x2019;t get onto arXiv the usual way, published first, and came back afterwards.</p>
+
+  <p>So: how enriched is gen-ph in that fingerprint?</p>
+
+  <p>Of published gen-ph papers, <strong>10.1%</strong> were deposited one to three years after their journal publication. In gr-qc, <strong>1.9%</strong>.</p>
+
+  <p>That&#x2019;s 5.2-fold. And it isn&#x2019;t people archiving ancient work &mdash; the decades-late tail is small in both and doesn&#x2019;t account for it, 2.1% against 0.5%. One to three years is the publication cycle. These are papers that went to a journal first and arrived at arXiv holding a receipt.</p>
+
+  <p>Ten percent is a floor twice over, incidentally. It counts only papers carrying a <code>journal-ref</code> at all, and year granularity makes same-year readmissions invisible.</p>
+
+  <h2>What that implies</h2>
+
+  <p>gen-ph is not simply a low-prestige category. A measurable slice of it is a holding pen &mdash; work that was turned away at the door, went and got published, and came back.</p>
+
+  <p>That matters for number two, because it partly dissolves it. If a real fraction of gen-ph is readmitted work, then some of that 4.9% flagship rate just reflects where a paper can publish when it has no preprint to point at. Which is a treatment effect wearing the costume of selection.</p>
+
+  <p>There&#x2019;s a tidy loop in that: the routing produces the evidence that justifies the routing.</p>
+
+  <p>And one more figure, the sharpest in the set. Of the 39 readmitted gen-ph papers in this window, the number that reached a flagship venue is <strong>zero</strong>. Not low. Zero. They went to <em>EPJ D</em>, <em>IJTP</em>, <em>Modern Physics Letters A</em>, a Mexican society bulletin, and a few venues whose names I&#x2019;d describe as aspirational.</p>
+
+  <h2>Caveats, and one I went and tested</h2>
+
+  <p><code>journal-ref</code> is author-reported, and reporting habits may differ between categories. That&#x2019;s the one I can&#x2019;t fix from outside. &ldquo;Flagship&rdquo; is my keyword list, not a ranking body&#x2019;s. The window is three years. And there&#x2019;s a reading I can&#x2019;t exclude: gen-ph may simply attract authors further from the mainstream who find arXiv late, for reasons having nothing to do with rejection.</p>
+
+  <p>One objection I <em>can</em> answer, because I went back and checked. My first pass sampled gr-qc at 200 papers a month rather than taking all of them, and a capped, non-randomly-ordered sample is exactly the sort of thing that manufactures a result. So I ran the full census &mdash; all 17,897 &mdash; and every figure moved by less than a percentage point. The sample was fine. I mention it because I wouldn&#x2019;t have believed me either.</p>
+
+  <h2>What I&#x2019;d like someone to do next</h2>
+
+  <p>Three things I can&#x2019;t do from here, in rising order of how much I want them:</p>
+
+  <p>Resolve the same-year cases. Journal months are recoverable through Crossref, which would turn the 10.1% floor into an actual estimate, and I suspect the actual estimate is considerably higher.</p>
+
+  <p>Extend backwards. Three years is enough to see the effect and not enough to see whether it&#x2019;s growing.</p>
+
+  <p>And the one that would settle it: citation trajectories for matched pairs. Take gen-ph papers that published in a given journal, match them to gr-qc papers in the same journal and year, and compare citations. If the gen-ph twin is systematically less cited despite the identical venue, that&#x2019;s the treatment effect isolated, and the prophecy-versus-diagnosis question stops being unanswerable from outside.</p>
+
+  <p>Scripts, raw data, and the full census are here: <a href="https://github.com/beastraban/WhatsInGenPhys">github.com/beastraban/WhatsInGenPhys</a>. If you think this is wrong, everything needed to demonstrate it is in that directory. I&#x2019;d rather be corrected in public than right in private.</p>
+
+  <div class="section-dinkus">&#x2014; &#x25C6; &#x2014;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist and Senior Lecturer at Braude College of Engineering, Israel. He works on thermodynamics, Bayesian epistemology, and the philosophy of science.</p>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
