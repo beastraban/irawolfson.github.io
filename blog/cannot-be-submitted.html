@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Paper That Cannot Be Submitted &mdash; Entropically Yours</title>
+<meta name="description" content="A rejection letter that recommends peer review, a submission form that won't let you get any, and the discovery that nobody actually built the thing that is happening to me.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+strong{font-weight:600;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+a:hover{border-bottom-color:var(--accent);}
+code{font-family:'DM Mono',monospace;font-size:0.84em;background:var(--paper-warm);padding:0.08em 0.36em;border-radius:3px;color:var(--ink-mid);}
+blockquote{border-left:3px solid var(--accent);margin:2.4rem 0;padding:0.3rem 0 0.3rem 1.6rem;font-style:normal;font-size:1.02rem;color:var(--ink-mid);line-height:1.68;}
+blockquote p{margin-bottom:0.9rem;}
+blockquote p:last-child{margin-bottom:0;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:560px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Metascience</div>
+    <h1>The Paper That Cannot Be Submitted</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; July 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> A rejection letter that recommends peer review, a submission form that won&#x2019;t let you get any, and the discovery that nobody actually built the thing that is happening to me.</div>
+  </header>
+
+  <p>Here is a sentence I did not expect to write with a straight face: there is a paper of mine that cannot be submitted to the <em>Journal of High Energy Physics</em>. Not rejected. Not desk-rejected. Not read by an editor and found wanting. <strong>Submitted</strong> &mdash; the verb, the act, the clicking of a button. It cannot be done, by me or by anyone, and the reason has nothing to do with the physics.</p>
+
+  <p>The mechanism takes three sentences, all documented.</p>
+
+  <p>arXiv declined the paper and advised me to obtain peer review elsewhere. JHEP&#x2019;s submission portal will not accept a manuscript without an arXiv identifier. There are two submission routes on that page, and both stop at the same field.</p>
+
+  <p>That&#x2019;s the whole thing. Everything below is detail.</p>
+
+  <h2>The letter</h2>
+
+  <p>arXiv&#x2019;s moderators sent this. I&#x2019;m quoting it in full, because paraphrase invites the reasonable objection that surely they didn&#x2019;t put it quite like that.</p>
+
+  <blockquote>
+    <p>Thank you for submitting your work to arXiv. We regret to inform you that arXiv&#x2019;s moderators have determined that your submission will not be accepted at this time and made public on arXiv.org.</p>
+    <p>In this case, our moderators have determined that your submission would benefit from additional review and revision that is outside of the services we provide.</p>
+    <p>Our moderators will reconsider this material via appeal if it is published in a conventional journal and you can provide a resolving DOI to the published version of the work or link to the journal&#x2019;s website showing the status of the work.</p>
+    <p>Note that publication in a conventional journal does not guarantee that arXiv will accept this work.</p>
+    <p>[&hellip;] Some authors have found that asking their personal network of colleagues or submitting to a conventional journal for peer review are alternative avenues to obtain feedback.</p>
+  </blockquote>
+
+  <p>Four clauses are doing work, and I want to be precise about which.</p>
+
+  <p>The first is a judgment about scientific merit &mdash; the work <em>needs more review</em> &mdash; immediately followed by a disclaimer of competence to make it. It is <em>outside the services we provide</em>. Someone assessed the physics, in a sentence, and the same sentence says they don&#x2019;t do that. Hold onto this one; it gets worse.</p>
+
+  <p>The second names a remedy: publish in a conventional journal.</p>
+
+  <p>The third withdraws it. Publication <em>does not guarantee</em> acceptance. A gate whose stated exit condition explicitly does not open it is not a gate. It&#x2019;s discretion with a procedure painted on the front.</p>
+
+  <p>The fourth is my favourite, and it is official advice: ask your personal network of colleagues. Social capital, in writing, as policy.</p>
+
+  <p>Then there&#x2019;s the envelope, which I overlooked for an embarrassingly long time. The letter is signed <em>arXiv Support</em>. It arrives as a ticket, with a link to view the request and a toggle to turn off notifications. The appeals portal is an Atlassian service desk &mdash; the same product a mid-sized company uses to route broken laptops &mdash; and the human who eventually replied signs as <em>Support 3</em>. The genre is unambiguous: this is not editorial correspondence, it is customer service. Somewhere upstream a decision was taken about whether a piece of physics enters the literature, and it reached me through the same channel as a password reset.</p>
+
+  <h2>The form</h2>
+
+  <p>So I took the advice. Conventional journal, peer review, exactly as instructed.</p>
+
+  <p>JHEP&#x2019;s author guidelines say it plainly: you will need to provide an arXiv article id, because JHEP articles are funded by the SCOAP3 consortium and must be categorised and published accordingly. The submission page repeats it. Enter an arXiv identifier. No identifier, no submission &mdash; and if you&#x2019;re wondering about the second button, the one marked <em>Upload your file</em>, I checked. Same wall. Same red text.</p>
+
+  <p><em>Please enter a valid arXiv article id.</em></p>
+
+  <p>I do not have one. That is the entire reason I am on this page.</p>
+
+  <figure class="lead-image">
+    <img src="jhep-submission-portal.png"
+         alt="JHEP paper-submission portal headed &lsquo;arXiv id,&rsquo; showing a red error &lsquo;Please enter a valid arXiv article id&rsquo; above an empty text field, with two buttons below marked &lsquo;Upload your file&rsquo; and &lsquo;Submit from arXiv.&rsquo;"
+         loading="lazy">
+    <figcaption>JHEP&#x2019;s submission portal, 22 July 2026. The same error follows either button &mdash; <em>Upload your file</em> and <em>Submit from arXiv</em> both stop here. Anyone with a JHEP account can reproduce this in under a minute; I&#x2019;d encourage it.</figcaption>
+  </figure>
+
+  <h2>Nobody built this</h2>
+
+  <p>The temptation is to call this a racket, and I want to resist it, because it isn&#x2019;t one and because the truth is more interesting.</p>
+
+  <p>Hanlon&#x2019;s razor: never attribute to malice what is adequately explained by stupidity. Right instinct, wrong word. Nobody here is stupid. SCOAP3&#x2019;s categorisation requirement is sensible. arXiv&#x2019;s moderation load is real and the volume is crushing. JHEP&#x2019;s form does exactly what it was built to do. Every individual in this chain is competent, and I choose to believe they are acting in good faith.</p>
+
+  <p>So let me propose the duller blade, which I think is the accurate one: <strong>never attribute to malice what is adequately explained by reckless oversight.</strong> Not stupidity. Not indifference either &mdash; reckless in the legal sense, where you are answerable for the foreseeable consequences of the thing you didn&#x2019;t bother to look at.</p>
+
+  <p>Because nobody at JHEP decided arXiv should screen their submissions. What happened is that SCOAP3 funds the open-access publication, SCOAP3 requires categorisation, categorisation runs on arXiv identifiers, and so an identifier became a precondition for the submit button. Each step is defensible. Each was taken by someone solving a real problem in front of them.</p>
+
+  <p>The composition is what nobody audited. Chain the four together and arXiv moderation becomes JHEP&#x2019;s first-pass filter &mdash; unnamed, uncontracted, and as far as I can tell never agreed to by either party. Call it the <strong>categorisation ouroboros</strong>: an administrative requirement about metadata that quietly acquired the power to decide what gets read.</p>
+
+  <figure class="lead-image">
+    <img src="categorisation-ouroboros.png"
+         alt="The classic ouroboros &mdash; a serpent devouring its own tail &mdash; its head labelled JHEP and the tail in its mouth labelled arXiv."
+         loading="lazy">
+    <figcaption>The categorisation ouroboros: JHEP&#x2019;s gate feeds on an arXiv id that arXiv will not grant prior to publication. &mdash; After the ouroboros of Theodoros Pelecanos, 1478 (public domain).</figcaption>
+  </figure>
+
+  <p>This is where the duller blade cuts. A defensible step, times four, is not automatically a defensible system, and somebody ought to be checking. That nobody is checking isn&#x2019;t stupidity. It&#x2019;s the specific failure of assuming that because each component behaves, the assembly does &mdash; which in any other engineering context we&#x2019;d call negligent, and which in this one we call how things ended up.</p>
+
+  <p>And here&#x2019;s what makes it different in kind from a rejection. A journal that rejects you has an editor, and the editor has a name, an institution, and a board that can be written to. arXiv&#x2019;s moderators are anonymous by design and the criteria are unpublished. My appeal against the original rejection was never acknowledged at all &mdash; not denied, not queued, not answered. A later request did produce a reply, and I was briefly encouraged until I looked at the timestamps: the message and two automatic status changes all landed in the same minute. A trigger firing on ticket creation, signed with a support agent&#x2019;s name.</p>
+
+  <p>Which brings me to the part I find genuinely hard to get past. Across two rejections and two appeals, I have not received one sentence written by a human being about the contents of my papers. Not a line. Everything I hold is template.</p>
+
+  <p>I&#x2019;m not alleging bad faith &mdash; I have no way to allege anything about people I cannot identify. That&#x2019;s rather the point. The accountability machinery we spent a century building around peer review does not exist here, and we have made passing through here compulsory.</p>
+
+  <h2>What happened to the other one</h2>
+
+  <p>At this stage a reader is entitled to a suspicion: that the physics was bad, arXiv sniffed it out correctly, and this whole post is an elaborate way of not saying so.</p>
+
+  <p>Fair. So here&#x2019;s the control.</p>
+
+  <p>A different paper of mine, on the geometric origin of the factor of 1/4 in the Bekenstein&ndash;Hawking entropy, was rejected by arXiv. Not a similar letter &mdash; I have both in front of me and they&#x2019;re identical, same clauses, same order, same apology for the high volume of submissions, same closing good wishes.</p>
+
+  <p>Which is worth pausing on, because it changes what that first clause means. Neither letter names the paper it rejects. No title, no abstract line, nothing identifying the object of judgment except a submission number. So <em>your submission would benefit from additional review and revision</em> is not an assessment of my work. It&#x2019;s a template. The sentence reading as a considered scientific verdict is boilerplate wearing a verdict&#x2019;s clothes.</p>
+
+  <p>I&#x2019;ll concede immediately that a queue at arXiv&#x2019;s volume can&#x2019;t write bespoke letters. Of course it can&#x2019;t. But then don&#x2019;t put a merit claim in the template. <em>This submission has not been accepted; we do not provide reasons</em> would be honest, unhelpful, and considerably more defensible than a form letter that appears to tell several thousand people a year something specific about their physics.</p>
+
+  <p>At any rate, I did what the letter said. I sent it to <em>Classical and Quantum Gravity</em>. It was refereed by people who read it. It was accepted, published, and has a DOI that resolves. It was picked up by the national press, which is a peculiar fate for a factor of 1/4.</p>
+
+  <p>Then I went back to arXiv with the DOI in hand &mdash; clause two satisfied in full. Not through the appeal channel, which by then had swallowed one attempt without acknowledgement. As a new submission.</p>
+
+  <p>They accepted it. Into <code>physics.gen-ph</code>.</p>
+
+  <p>Gen-ph is the category that functions as a polite oubliette. Nobody&#x2019;s alerts watch it. Nobody&#x2019;s search habits go there. It&#x2019;s technically not a rejection, which is exactly what makes it work. The paper is public, it has an identifier, every box is ticked, and the effective readership is upper-bound by one.</p>
+
+  <p>Sit with the shape of that. The full remedy arXiv itself specified &mdash; peer review, publication, a resolving DOI &mdash; was performed, and what it purchased was admission to the archive&#x2019;s basement. Their letter warned that publication does not guarantee acceptance. It turns out to be worse than that, and more elegant: publication guarantees a <em>kind</em> of acceptance that costs them nothing to grant and does me very little good.</p>
+
+  <p>Meanwhile the actual epistemic verdict is on the record. CQG&#x2019;s referees read the physics and said yes. arXiv&#x2019;s moderators, holding that same published paper, said gen-ph. Those two assessments disagree, in public, with timestamps. At least one is wrong, and only one was made by someone who read it.</p>
+
+  <h2>What&#x2019;s actually in gen-ph</h2>
+
+  <p>One data point isn&#x2019;t a result. It&#x2019;s an anecdote with a DOI attached, so I went and measured the category properly &mdash; the full 2020&ndash;2022 census, both categories, <a href="https://irawolfson.com/blog/gen-ph.html">written up separately here</a>, with the <a href="https://github.com/beastraban/WhatsInGenPhys">scripts and raw data</a> published alongside.</p>
+
+  <p>The short version, and it doesn&#x2019;t flatter me evenly. gen-ph papers get published at nearly the rate gr-qc papers do &mdash; 44.6% against 51.8% &mdash; so whatever the routing detects, it isn&#x2019;t unpublishability. But they publish in flagship venues at 4.9% against gr-qc&#x2019;s 56.2%, and a defender of the moderation system can point at that and claim vindication.</p>
+
+  <p>The number that matters here is the third one. <strong>Of published gen-ph papers, 10.1% were deposited on arXiv one to three years <em>after</em> their journal publication. In gr-qc it&#x2019;s 1.9%.</strong> Five-fold. That&#x2019;s the fingerprint of exactly this pipeline: rejected, published elsewhere, readmitted holding a receipt. Which means the route I took isn&#x2019;t an anomaly. It&#x2019;s a documented pattern, and arXiv&#x2019;s own form letter is the document that prescribes it.</p>
+
+  <p>And one figure I include because leaving it out would be dishonest. Of those 39 readmitted papers, the number reaching a flagship journal is zero. Mine went to CQG. So on three years of evidence I&#x2019;m a class of one, which is the strongest thing I can say about my own case and the weakest possible basis for generalising from it. If you want to read this whole post as one man&#x2019;s statistical anomaly complaining about the mean, I can&#x2019;t stop you, and the data is right there to do it with.</p>
+
+  <h2>What I am not claiming</h2>
+
+  <p>Not that arXiv should publish everything. A moderation layer is necessary, the volume is brutal, and I don&#x2019;t envy them.</p>
+
+  <p>Not that this is all of physics. I tested one journal. Boltzmann Brain-Death currently sits at <em>Foundations of Physics</em>, which took it without an arXiv identifier and without drama &mdash; so the loop is not universal. It&#x2019;s a SCOAP3-adjacent phenomenon, and how far it extends is a question I can&#x2019;t answer from one submission portal and one afternoon.</p>
+
+  <p>What I&#x2019;m claiming is narrow and, I think, hard to argue with: for at least one Q1 journal in high energy physics, the decision about whether your manuscript ever reaches an editor has been handed to an anonymous body that publishes no criteria, gives no reasons, signs its decisions <em>Support</em>, and explicitly disclaims the ability to evaluate research.</p>
+
+  <p>There is nominally an appeals process. The letter points at it. I filed one and never heard back &mdash; to this day I don&#x2019;t know whether it was denied on the merits or never read, and there is no state I can query to find out. Nothing eventually got that paper onto arXiv except starting over: a fresh submission, months later, with a journal&#x2019;s imprimatur attached. The remedy the letter advertises is not the thing that worked. I went around it.</p>
+
+  <p>Not by conspiracy. By plumbing.</p>
+
+  <h2>So what now</h2>
+
+  <p>This has run considerably longer than I meant it to, which my wife &mdash; who has heard the whole thing at greater length still, and who noted that I&#x2019;d been saying &ldquo;and another thing&rdquo; for about forty minutes &mdash; will tell you is the least surprising sentence here. She asked the only question that matters: so what do you do now?</p>
+
+  <p>When I started drafting this post, the honest answer was <em>I wait</em>. There was a second appeal in flight &mdash; not to be let in, since I&#x2019;m in, but to be moved from gen-ph to gr-qc where the paper&#x2019;s readers actually are. A published, refereed, DOI-bearing paper asking to be filed under its own subject. I&#x2019;d have called that a formality a year ago.</p>
+
+  <p>Before I finished, the answer arrived. I&#x2019;ll quote it in full, because it is short enough to.</p>
+
+  <blockquote>
+    <p>After careful consideration, our moderators have denied your appeal. We understand this is a disappointing result, but please note this is the final decision and no further consideration will be given.</p>
+  </blockquote>
+
+  <p>That&#x2019;s the reply. Every condition in the original letter met &mdash; published, refereed, DOI resolving &mdash; and the request was not even for admission but for the correct shelf. Denied, no reason, final.</p>
+
+  <p>One detail, for the record. The automated acknowledgement of this appeal arrived in the same minute I filed it. This denial did not &mdash; it came days later, on its own schedule, which means a person was involved in closing it. So somebody did, at last, make a human decision about my paper. They just declined to say a single word about its contents while doing so. After two rejections and two appeals, that remains the count: not one sentence, from any human being, about the physics.</p>
+
+  <p>So what do I do now? Nothing, as regards arXiv; there is nowhere left to do it. The paper is published, it is read by the people who cite it, and it sits in gen-ph, and both of those things are now permanent. I&#x2019;m writing this instead. Draw your own conclusions from the fact that the only remaining venue for the appeal was a blog.</p>
+
+  <div class="section-dinkus">&#x2014; &#x25C6; &#x2014;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist and Senior Lecturer at Braude College of Engineering, Israel. The 1/4 paper is arXiv:2607.09699, published in <em>Classical and Quantum Gravity</em>, DOI <a href="https://doi.org/10.1088/1361-6382/ae7fe8">10.1088/1361-6382/ae7fe8</a>.</p>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
