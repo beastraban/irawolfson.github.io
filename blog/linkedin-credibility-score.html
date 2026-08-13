@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Keeps a Secret Credibility Score On You &mdash; Entropically Yours</title>
+<meta name="description" content="I asked LinkedIn for everything it knows about me. Buried in the export was a hidden scorecard grading my professional worth out of five. It rated a conference talk and a newspaper feature at zero each — and my desire for a Tesla with more confidence than anything I have actually done.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+strong{font-weight:600;}
+.scores{font-variant-numeric:tabular-nums;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+a:hover{border-bottom-color:var(--accent);}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+.close{text-align:center;font-style:italic;color:var(--ink-light);font-size:1.12rem;margin:2.2rem 0 0.5rem;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:400px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">The Quantified Self</div>
+    <h1>LinkedIn Keeps a Secret Credibility Score On You. Mine Is Certain I Want a Tesla.</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; August 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> I asked LinkedIn for everything it knows about me. Buried in the export was a hidden scorecard grading my professional worth out of five, across twelve dimensions. It rated a conference talk and a newspaper feature at zero each &mdash; and my desire for a Tesla with more confidence than anything I have actually done.</div>
+  </header>
+
+  <p>Last month I gave a talk at SigmaPhi 2026, an international statistical-physics conference in Crete. This summer I published a result in <em>Classical and Quantum Gravity</em>: the factor of &frac14; in a black hole&rsquo;s entropy is not a fudge factor tuned to fit, but something forced by geometry itself. In July, a national newspaper ran a piece on it.</p>
+
+  <p>I mention all of this not to preen (well, maybe a bit!), but because I need you to hold it in your head for the next sixty seconds (but seriously &mdash; also to preen).</p>
+
+  <p>Unbeknownst to the protagonist of this story, LinkedIn has also been evaluating me. Quietly. It turns out the platform keeps a hidden credibility scorecard on you. I was bored on a bus ride, so I ordered a &ldquo;complete&rdquo; data export &mdash; the file you get when you ask LinkedIn for everything it knows about you. Apparently, it grades you, out of 5, across twelve dimensions of professional worth. Mine was last recomputed on July 20, eleven days after Crete, a week after the newspaper.</p>
+
+  <p>Here is what the machine concluded.</p>
+
+  <p class="scores">Academic contributions: 3. Institutional credibility: 3. Fair enough. Then it begins to descend. Notability: 2. Thought leadership: 2. Visibility: 2. Organizational influence: 1. Public reach: 1.</p>
+
+  <p>And then the floor drops out.</p>
+
+  <p class="scores"><strong>Event speaker: 0. Media recognition: 0. Honors: 0.</strong></p>
+
+  <p>The talk in Crete: zero. The newspaper: zero. Fold all twelve dimensions together, and the aggregate reads 1.01 out of 5. Notability tier: 1 of 4. The bottom rung.</p>
+
+  <figure class="lead-image">
+    <img src="crete-nissos.jpg" alt="The author in a flat cap and floral shirt at a caf&eacute; in Crete, a pint of Nissos beer in the foreground reading &lsquo;Born in Cyclades.&rsquo;" loading="lazy">
+    <figcaption>Exhibit A: the event that scored a zero. Nissos, &ldquo;Born in Cyclades&rdquo; &mdash; Crete, July 2026.</figcaption>
+  </figure>
+
+  <p>I could argue with the engine. I won&rsquo;t. Because I&rsquo;ll lose. I think it overestimated my academic contributions, and don&rsquo;t get me started on thought leadership. The only thoughts I lead are my own (barely!).</p>
+
+  <p>To sum up, it told me I&rsquo;m a freelancer (maybe, kind of, fine). It also thinks I&rsquo;m &ldquo;an active contributor who influences public opinion&rdquo; &mdash; not sure I agree, but ok, I&rsquo;ll take it. And it thinks, with more confidence than it assigned to any actual thing I have done, that I have an &ldquo;affinity for electric vehicles.&rdquo;</p>
+
+  <p>Which is, meh, I mean, I wouldn&rsquo;t mind having a Tesla. But I also wouldn&rsquo;t mind having Miles Davis&rsquo; original Martin Committee.</p>
+
+  <p>By the way, at some point I actually had a Martin Committee trumpet &mdash; its bell got smashed when I almost died, I fixed it with an old Yamaha bell and gave it to my cousin Yishai&hellip; but that&rsquo;s another story.</p>
+
+  <p>So let us tally it honestly. Across twelve measures of my professional life, the algorithm scored me a zero, a one, or a two on nearly every one, and rated the whole of me at the lowest tier it offers. The single inference it got right &mdash; the one thing it read correctly about the person behind the profile &mdash; is that I would, in fact, not mind a Tesla.</p>
+
+  <p class="pull">LinkedIn: 0 for 12 on my career. 1 for 1 on my consumer desires.</p>
+
+  <p class="close">I have never felt so precisely understood.</p>
+
+  <div class="section-dinkus">&#x2014; &#x25C6; &#x2014;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist and Senior Lecturer at Braude College of Engineering, Israel. He works on thermodynamics, Bayesian epistemology, and the philosophy of science. The &frac14; paper is published (open access) in <em>Classical and Quantum Gravity</em>: <a href="https://doi.org/10.1088/1361-6382/ae7fe8">doi.org/10.1088/1361-6382/ae7fe8</a>.</p>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
