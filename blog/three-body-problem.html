@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What The Three-Body Problem Gets Wrong &mdash; Entropically Yours</title>
+<meta name="description" content="A footnote that got out of hand: the real three-body problem, why chaos isn't unpredictability, why a sealed planet bakes rather than freezes, and the Accelerator Fallacy.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+strong{font-weight:600;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+a:hover{border-bottom-color:var(--accent);}
+code{font-family:'DM Mono',monospace;font-size:0.84em;background:var(--paper-warm);padding:0.08em 0.36em;border-radius:3px;color:var(--ink-mid);}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+.mathvar{font-style:italic;font-family:'EB Garamond',serif;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:660px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── FOOTNOTES ── */
+sup.fn-ref{font-family:'DM Mono',monospace;}
+sup.fn-ref a{color:var(--accent);border:0;font-size:0.72em;padding:0 0.1em;font-weight:500;}
+.endnotes{border-top:var(--rule-thin);margin-top:3.4rem;padding-top:1.4rem;}
+.endnotes-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-light);margin-bottom:1rem;}
+.endnotes ol{font-family:'EB Garamond',serif;font-size:0.95rem;color:var(--ink-mid);line-height:1.6;padding-left:1.4rem;}
+.endnotes li{margin-bottom:0.7rem;}
+.endnotes a{border:0;}
+.fn-back{margin-left:0.3rem;color:var(--ink-faint);}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Physics &amp; Science Fiction</div>
+    <h1>What The Three-Body Problem Gets Wrong (And Why The Real Physics Is Weirder)</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; August 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> A footnote that got out of hand, the actual three-body problem, and why you can&rsquo;t put a roof on a planet and call it a freezer.</div>
+  </header>
+
+  <p>I was writing about entropy last week &mdash; specifically, about why your scrambled eggs are gone forever and Loschmidt&rsquo;s paradox and all that jazz &mdash; and I put in a footnote. You know how footnotes go. It&rsquo;s like chocolate. You start by telling yourself, it&rsquo;s just one piece, and then, before you know it, the empty wrapper is looking at you judgmentally.</p>
+
+  <p>I usually avoid reading books or watching series that are currently all the rage. Like fine wine, I let them mature. At some point, if they survived the test of time, I dub them marginally worthy of my attention<sup class="fn-ref"><a href="#fn1" id="fnref1" role="doc-noteref">1</a></sup>.</p>
+
+  <p>But, for my brother-from-another-mother, and for my actual brother, both of whom had enthusiastically told me to read a certain book, I made an exception.</p>
+
+  <p>And so, I found myself over a weekend, in between missile sirens and running for shelter, reading &ldquo;The Three-Body Problem&rdquo;.</p>
+
+  <p>I had a severe case of schizoid-split. The mystery part was nice enough. But the physics part was problematic, and made me want to put the book down pretty much after the first chapter. The initial problem was not necessarily that it was wrong. Even worse, it was obvious and pretty boring.</p>
+
+  <p>Let me tell you why. The title itself is &ldquo;The Three-Body Problem,&rdquo; which, for anyone remotely educated about physics, tells the entire story right there and then.</p>
+
+  <p><strong>If you haven&rsquo;t read the book. Stop! Now! You WILL read spoilers!</strong></p>
+
+  <p>The three-body problem is a famous problem that can be instantiated easily at home.<br>
+  Take three magnets. Glue them to the points of an equilateral triangle, which fastens them securely in place. Now, hang a magnet on a string just above the center. If you give the weighted string a slight push or pull (or probably even breathe on it too strongly), the weight will start oscillating wildly in a pattern that looks random.</p>
+
+  <p>However, and this is key, the pattern is anything but random.</p>
+
+  <figure class="lead-image">
+    <img src="three-body-basins.jpg"
+         alt="Figure 1: the three basins of attraction of a magnetic pendulum, rendered as interleaving red, green, and blue fractal regions."
+         loading="lazy">
+    <figcaption>Figure 1 &mdash; A magnetic pendulum over three magnets. Each color marks which magnet the pendulum finally settles on, as a function of where it started. Complex? Sure. Random? Not so much.</figcaption>
+  </figure>
+
+  <p>The initial premise of the book confidently tells you that chaotic systems are fundamentally unpredictable. I called it a &ldquo;childish blunder.&rdquo; My editor &mdash; who is also my better half, whom I will henceforth refer to as my liege-wife &mdash; told me that footnote was &ldquo;aggressively nerdy&rdquo; and that I should either write the whole thing or delete it.</p>
+
+  <p>She was right. She is always right. This is the whole thing.</p>
+
+  <p><strong>Chaos does not mean unpredictable.</strong></p>
+
+  <p>I&rsquo;ll say it again for the people in the back: chaos. Does not. Mean. Unpredictable.</p>
+
+  <p>What chaos actually means, in the technical sense, is extreme sensitivity to initial conditions. Two trajectories that start very close together will diverge &mdash; exponentially, and fast<sup class="fn-ref"><a href="#fn2" id="fnref2" role="doc-noteref">2</a></sup>. Given enough time and limited computing power, your predictions become useless. But &mdash; and this is crucial &mdash; if you <em>know</em> the initial conditions precisely enough, and you have enough computing power, you can predict a chaotic system&rsquo;s future exactly.</p>
+
+  <p>This is not a loophole. It is the definition.</p>
+
+  <p>The Trisolaran astronomers watching their three suns careen through unpredictable orbits aren&rsquo;t watching something fundamentally unknowable. They&rsquo;re watching something <em>computationally expensive.</em> There&rsquo;s a difference. A big one. Physics is not defeated by chaos &mdash; it&rsquo;s inconvenienced by it. Chaotic systems obey differential equations just as politely as anything else. They just require more decimal places.</p>
+
+  <p>This matters, by the way, because the entire existential dread of the Trisolarans &mdash; and their murderous response to it &mdash; rests on this misunderstanding. Their civilization is in crisis not because physics failed them but because they&rsquo;re, essentially, bad at numerical methods. Figure 1 above is an example of a fairly simple physics simulation of a three-body problem. I am now going to perform some physics<sup class="fn-ref"><a href="#fn3" id="fnref3" role="doc-noteref">3</a></sup> &mdash; hold fast! Not the mind-blowing matrix-rich, curvilinear non-Euclidean flavor. Just back-of-the-envelope.</p>
+
+  <p>An earthbound linear pendulum has a fixed period given by <span class="mathvar">T</span>&nbsp;=&nbsp;&radic;(<span class="mathvar">l</span>/<span class="mathvar">g</span>) where <span class="mathvar">l</span> is the length of the string and <span class="mathvar">g</span> is the gravitational acceleration on Earth&rsquo;s surface.</p>
+
+  <p>For a planet, around a sun, the Goldilocks region &mdash; the region in which a planet can reside to be able to support life is, by the most relaxed analysis, anywhere between 0.4&ndash;10 AU (Astronomical Unit, the average distance of Earth from the Sun). Since the Trisolarian planet sometimes burns, let&rsquo;s be nasty and put the minimal distance at 0.1 AU.</p>
+
+  <p>And, let&rsquo;s be very permissive and have the Trisolarian suns be anywhere between 20 solar masses and 0.8 solar masses, which are the yellow super-giants upper mass limit, and the prime series stars lower limit, respectively.</p>
+
+  <p>The Trisolarian world is a spherical planet (the book mentions a horizon), and the minimal mass of a spherical planet is given by the rock-planet limit<sup class="fn-ref"><a href="#fn4" id="fnref4" role="doc-noteref">4</a></sup> which is roughly 10<sup>21</sup>&ndash;10<sup>22</sup>&nbsp;kg, which is a hundred to a thousand times lighter than our Earth. The heaviest limit is harder to calculate, but is approximately the brown dwarf limit (I&rsquo;m playing VERY fast and loose here), which is about 2.5&nbsp;&times;&nbsp;10<sup>28</sup>&nbsp;kg, or &sim;0.013 solar masses.</p>
+
+  <p>And so let&rsquo;s find the minimal possible period of the Trisolarian Earth.<br>
+  That happens approximately when gravitation is strongest, and the distance is smallest,<br>
+  So, a rough back-of-the-envelope calculation gives the absolute shortest period is 1.84 Earth days. That&rsquo;s plenty of time to run a calculation and tell the entire population to dehydrate. On the other end, they have about 800-year stable era. But the truth is, they don&rsquo;t even need that; all they ever have to do is calculate the general characteristics of the system to understand when the next chaotic/stable era will be approximately.</p>
+
+  <p>It&rsquo;s enough to know what the current situation is, and when the current era approximately ends to make plans, build tunnels, and generally secure continuity of knowledge, science, and culture.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>Now for the one that (almost) made me put the book down.</p>
+
+  <p>The sophons.</p>
+
+  <p>For the uninitiated: the plot involves unfolding a proton &mdash; a <em>proton</em> &mdash; into an eleven-dimensional surface, etching a circuit onto it, and then refolding it back into three-dimensional space. A supercomputer, the size of a proton, hiding in plain sight.</p>
+
+  <p>I want to be charitable here, because it&rsquo;s a lovely image. I genuinely do.</p>
+
+  <p>Here&rsquo;s the disappointing part. The idea of different-dimensional objects, and how higher-dimensional objects project onto our world, is almost as old as modern thermodynamics, i.e., ~150 years old.</p>
+
+  <p>Edwin Abbott wrote <em>Flatland</em> in 1884. A two-dimensional being watching a sphere pass through its plane sees a circle that appears, grows, shrinks, and vanishes &mdash; and has absolutely no framework for what just happened. The sophon is Flatland with better special effects and a significantly larger production budget.</p>
+
+  <p>What Liu Cixin adds to Abbott&rsquo;s premise is the proton. And here the physics quietly falls apart.</p>
+
+  <p>But here&rsquo;s the deeper problem with the sophon, one that doesn&rsquo;t require a physics degree to notice.</p>
+
+  <p>If the Trisolarans can manipulate matter at the level of unfolding a proton into eleven dimensions, they have essentially arbitrary control over material structure and energy. The engineering gap between &ldquo;refolding a proton&rdquo; and &ldquo;building a large shell around a star&rdquo; is not even close. A Dyson sphere is, comparatively, a garden shed.</p>
+
+  <p>Their entire civilizational problem is chaotic stellar heating &mdash; incineration, freezing, unpredictable seasons. A sufficiently advanced adaptive shell around their planet would solve this. You don&rsquo;t need to solve the three-body problem gravitationally if you can just put a roof on the planet.</p>
+
+  <p class="pull">The Trisolarans invented the microprocessor and keep dying of exposure because nobody thought to build a roof.</p>
+
+  <p>And when the book does eventually envelop their planet &mdash; in the unfolded proton itself &mdash; it gets the thermodynamics exactly backwards. The planet, we&rsquo;re told, freezes.</p>
+
+  <p>It wouldn&rsquo;t.</p>
+
+  <p>A shell that blocks incoming stellar radiation also blocks outgoing infrared. That&rsquo;s the entire premise of greenhouse gases &mdash; the atmosphere lets sunlight in and traps heat trying to escape. Seal a planet inside an opaque shell, and you&rsquo;ve built the universe&rsquo;s largest greenhouse. The planet&rsquo;s own geothermal heat has nowhere to go. You don&rsquo;t freeze. You slowly bake in your own waste heat.</p>
+
+  <p>Freezing would require a shell that is simultaneously perfectly reflective on the outside and perfectly transparent to infrared from the inside. Which is a very specific engineered optical property. Which the book doesn&rsquo;t claim. Which the Trisolarans, with their proton-folding capability, could certainly achieve &mdash; but apparently didn&rsquo;t think to specify.</p>
+
+  <p>Liu Cixin handwaved the thermodynamics at exactly the moment the thermodynamics matter most. In a book downstream of a thermodynamics problem. I find this almost poetic.</p>
+
+  <p>Then there&rsquo;s the science lock, which is where the book is genuinely clever in premise and quietly sells a false bill of goods.</p>
+
+  <p>The Trisolarans, threatened by humanity&rsquo;s potential, deploy sophons to disrupt particle accelerator experiments &mdash; preventing us from discovering new fundamental physics. They lock our science.</p>
+
+  <p>The idea is irresistible as a plot device. But fundamental physics is not only done in accelerators. Cosmology, gravitational wave astronomy, precision atomic clocks, condensed matter &mdash; vast amounts of our understanding of physical law come from observations no sophon could plausibly jam. The cosmic microwave background doesn&rsquo;t care about sophon interference. Gravitational waves from merging neutron stars do not pass through a particle accelerator.</p>
+
+  <p>Call this the <strong>Accelerator Fallacy:</strong> the assumption that particle physics is the only physics. It&rsquo;s flattering to high-energy physicists, but it dramatically underestimates how many routes there are to fundamental understanding. A civilization capable of interstellar travel surely knows this.</p>
+
+  <p>None of this diminishes the book. It&rsquo;s a remarkable piece of science fiction, and Liu Cixin is thinking at a scale that most writers don&rsquo;t attempt. Getting the chaos wrong, fudging the proton geometry, missing the greenhouse physics, underestimating the breadth of science &mdash; these are the costs of ambitious science fiction, and they&rsquo;re small costs.</p>
+
+  <p>But here&rsquo;s what I keep coming back to.</p>
+
+  <p>The <em>actual</em> three-body problem in physics &mdash; the real one, the gravitational one &mdash; is already strange enough. It has no general closed-form solution. Poincar&eacute; proved that in 1887, and it helped birth chaos theory. There are beautiful special cases: the figure-eight orbit, the Lagrange points, the choreographies. But in general, three bodies under mutual gravity is a mess of sensitivity and near-misses and eventual ejections.</p>
+
+  <p>The real three-body problem is wild. It didn&rsquo;t need embellishment.</p>
+
+  <p>That&rsquo;s usually how it goes with physics.</p>
+
+  <p>Well, I guess I wasn&rsquo;t that charitable, was I? &hellip;<br>
+  I&rsquo;m simply the worst.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist and Senior Lecturer at Braude College of Engineering, Israel. He works on thermodynamics, Bayesian epistemology, and the philosophy of science.</p>
+
+  <aside class="endnotes" role="doc-endnotes">
+    <div class="endnotes-label">Footnotes</div>
+    <ol>
+      <li id="fn1">Mind you &mdash; I still read crap all the time. Just old crap.<a href="#fnref1" class="fn-back" role="doc-backlink" aria-label="Back to reference 1">&#8617;&#xFE0E;</a></li>
+      <li id="fn2">This is encoded in a quantity that is called Lyapunov exponents, and the range of their applicability is borderline absurd!<a href="#fnref2" class="fn-back" role="doc-backlink" aria-label="Back to reference 2">&#8617;&#xFE0E;</a></li>
+      <li id="fn3">I will need a bunny-rabbit and a chainsaw!<a href="#fnref3" class="fn-back" role="doc-backlink" aria-label="Back to reference 3">&#8617;&#xFE0E;</a></li>
+      <li id="fn4">The mass limit at which the gravitational self-pull of a rock roughly offsets the electrostatic repulsion between two protons, is also called the &ldquo;potato limit,&rdquo; and I thank the late great prof. David Eichler for that.<a href="#fnref4" class="fn-back" role="doc-backlink" aria-label="Back to reference 4">&#8617;&#xFE0E;</a></li>
+    </ol>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
