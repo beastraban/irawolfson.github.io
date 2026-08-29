@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What The Dark Forest Gets Right (And Why It Still Falls Apart) &mdash; Entropically Yours</title>
+<meta name="description" content="Book 2 of the Dark Forest. Liu Cixin's best idea isn't physics but epistemology: striking dominates not because the universe is zero-sum but because intent is inaccessible across the light-cone. Then his own sophons, his own dimensional strike, and plain entropy take the argument apart.">
+
+<link rel="icon" href="../assets/images/IRA-13_short.ico" type="image/x-icon">
+
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-mid: #3d3a35;
+  --ink-light: #6b6760;
+  --ink-faint: #9e9b96;
+  --paper: #f5f1ea;
+  --paper-warm: #ede8df;
+  --paper-rule: #d8d2c8;
+  --accent: #8b1a1a;
+  --rule-thin: 1px solid #ccc8c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond','Georgia','Times New Roman',serif;
+  /* fonts load async below — system fallbacks render immediately */
+  font-size:19px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead{border-bottom:2px solid var(--ink);text-align:center;padding:2.2rem 1rem 1.4rem;background:var(--paper);}
+.masthead-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:0.6rem;}
+.masthead-title{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--ink);}
+.masthead-title a{color:inherit;text-decoration:none;}
+.masthead-title a:hover{color:var(--accent);}
+.masthead-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-faint);margin-top:0.5rem;}
+
+/* ── ARTICLE ── */
+.article{max-width:700px;margin:0 auto;padding:0 2rem 6rem;}
+.article-head{padding:3.5rem 0 2.2rem;border-bottom:var(--rule-thin);margin-bottom:2.8rem;}
+.article-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-0.025em;margin-bottom:1.4rem;}
+.byline{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:0.06em;}
+.byline strong{color:var(--ink-mid);font-weight:500;}
+.article-abstract{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:var(--ink-mid);line-height:1.55;margin-top:1.6rem;padding-left:1rem;border-left:2px solid var(--accent);}
+.article-abstract strong{font-style:normal;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+
+/* ── BODY ── */
+p{margin-bottom:1.55rem;font-weight:400;}
+em{font-style:italic;}
+strong{font-weight:600;}
+h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;line-height:1.25;margin:3.2rem 0 1.3rem;color:var(--ink);border-top:var(--rule-thin);padding-top:2.2rem;}
+h3{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);margin:2.5rem 0 1rem;}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+a:hover{border-bottom-color:var(--accent);}
+code{font-family:'DM Mono',monospace;font-size:0.84em;background:var(--paper-warm);padding:0.08em 0.36em;border-radius:3px;color:var(--ink-mid);}
+blockquote{border-left:3px solid var(--accent);margin:2.6rem 0;padding:0.4rem 0 0.4rem 2rem;font-style:italic;font-size:1.28rem;color:var(--ink-mid);line-height:1.65;}
+.section-dinkus{text-align:center;color:var(--ink-faint);margin:2.8rem 0;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:0.35em;}
+.pull{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:400;line-height:1.25;text-align:center;color:var(--ink);margin:3rem 0;letter-spacing:-0.01em;}
+.mathvar{font-style:italic;font-family:'EB Garamond',serif;}
+.signoff{font-family:'EB Garamond',serif;font-style:italic;font-size:1.05rem;text-align:right;color:var(--ink-mid);margin:2.4rem 0 0;line-height:1.5;}
+
+/* ── LEAD IMAGE ── */
+.lead-image{margin:2.8rem auto;text-align:center;max-width:660px;}
+.lead-image img{width:100%;display:block;border:1px solid var(--paper-rule);}
+.lead-image figcaption{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--ink-faint);padding:0.7rem 1rem 0;text-align:center;line-height:1.6;}
+
+/* ── FOOTNOTES ── */
+sup.fn-ref{font-family:'DM Mono',monospace;}
+sup.fn-ref a{color:var(--accent);border:0;font-size:0.72em;padding:0 0.1em;font-weight:500;}
+.endnotes{border-top:var(--rule-thin);margin-top:3.4rem;padding-top:1.4rem;}
+.endnotes-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-light);margin-bottom:1rem;}
+.endnotes ol{font-family:'EB Garamond',serif;font-size:0.95rem;color:var(--ink-mid);line-height:1.6;padding-left:1.4rem;}
+.endnotes li{margin-bottom:0.7rem;}
+.endnotes a{border:0;}
+.fn-back{margin-left:0.3rem;color:var(--ink-faint);}
+
+/* ── BIO ── */
+.bio{margin-top:1rem;font-size:0.9rem;font-style:italic;color:var(--ink-light);line-height:1.65;}
+.bio a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--paper-rule);}
+.bio a:hover{border-bottom-color:var(--accent);}
+
+/* ── NAV BACK ── */
+.nav-back{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3rem;display:block;padding-top:2rem;}
+.nav-back a{color:var(--ink-light);text-decoration:none;}
+.nav-back a:hover{color:var(--accent);}
+
+/* ── FOOTER ── */
+.site-footer{border-top:2px solid var(--ink);text-align:center;padding:1.8rem 1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--ink-faint);text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-eyebrow">Entropically Yours</div>
+  <div class="masthead-title"><a href="index.html">Ira Wolfson</a></div>
+  <div class="masthead-sub">Thoughts about physics and stuff, while waiting for shit to compile.</div>
+</header>
+
+<main class="article">
+
+  <span class="nav-back"><a href="index.html">&larr; All posts</a></span>
+
+  <header class="article-head">
+    <div class="article-kicker">Physics &amp; Science Fiction</div>
+    <h1>What The Dark Forest Gets Right (And Why It Still Falls Apart)</h1>
+    <div class="byline"><strong>Ira Wolfson</strong> &mdash; August 2026</div>
+    <div class="article-abstract"><strong>Abstract:</strong> The one where Liu Cixin is finally right &mdash; about the physics that isn&rsquo;t physics &mdash; and then gift-wraps the murder weapon and hands it to the defense.</div>
+  </header>
+
+  <p>Have you ever had the right idea and smothered it in the crib yourself? I can&rsquo;t even start counting the number of ideas that seemed crazy at the time, that I killed, and that turned out right all along. Much like trying to hold a water-polo ball to stay afloat, you grab onto what seems to be safe, only for your team members to dunk you. It took me about 45 years and some change to get to trust my intuition enough to actually look at where it points.</p>
+
+  <p>Well, hold onto that feeling. You&rsquo;ll want it in a minute, because it is the entire story of what happened to Liu Cixin between the first book and the second.</p>
+
+  <p>I owe him an apology first. A small one, and I&rsquo;m going to claw most of it back before the end, so get it while the getting&rsquo;s good. In <a href="three-body-problem.html">the last one</a> I spent a few <strong>thousand</strong><sup class="fn-ref"><a href="#fn1" id="fnref1" role="doc-noteref">1</a></sup> words on why the physics of Book 1 is engineering malpractice &mdash; a civilization that can fold a proton and still keeps dying of exposure because nobody thought to build a roof. Book 2 is a different animal. Book 2 has the single best idea in the whole trilogy, and the joke is that it isn&rsquo;t physics at all. It&rsquo;s epistemology in a lab coat, and it is very nearly bulletproof.</p>
+
+  <p>And then, much like Zhang Beihai carving bullets out of meteorites to pick off the propulsion faction scientists, he shoots it. He takes the sharpest argument in modern science fiction, wraps it in two physical assumptions that don&rsquo;t survive a second look, and then spends two more books handing his own critics the exact tool they need to wave the whole thing away. So, fittingly, this post is about a burial (in space?) and the lower-dimensional escape hatch Liu welded into his own doomsday weapon and then, magnificently, never crawled through.</p>
+
+  <p>One thread runs out of the last essay straight into this one, so let me name it before we start and then leave it alone until it&rsquo;s earned. Book 1 was about the limit of <em>knowing</em> &mdash; chaos, horizons, what an observer can&rsquo;t compute. Book 2 is about the limit of <em>doing</em> &mdash; what you can&rsquo;t verify about another mind across the dark, and what that does to everyone standing around holding a gun. Same wall. Different face. The word is <em>inaccessibility</em>. Keep it in your pocket; we need it at both ends.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>The Dark Forest, if you&rsquo;ve somehow avoided both the books and every earnest man at a party since 2015, is Liu&rsquo;s answer to the Fermi paradox &mdash; the awkward business of why a universe this old and this enormous is this quiet. His answer is that everyone is hiding, because anyone who calls out gets shot. The galaxy is a forest of armed hunters, each silent, each treating every rustle as a threat to be put down on sight. Announce yourself, and you die. So nobody announces. Hence the silence, and hence the dread, which is the point &mdash; the idea is engineered to keep you up at night, and while not quite the 1000-page sleep-depriving horror that &lsquo;It&rsquo; is, it works.</p>
+
+  <p>It works by standing on two legs. Peel off the novelistic dressing &mdash; the &ldquo;chain of suspicion,&rdquo; the &ldquo;technological explosion&rdquo; &mdash; and the load-bearing assumptions are just these. One: harvestable resources are scarce, on the timescale a civilization actually lives on. Two: there are no arrangements between civilizations that leave both sides richer &mdash; no trade, no symbiosis, nothing but the fixed pie. Put them together, and the board is zero-sum, your gain is my loss, every stranger is a competitor, and shooting first is simply arithmetic. The forest goes dark.</p>
+
+  <figure class="lead-image" style="max-width:460px;">
+    <img src="tuco-bathtub-gbu.png"
+         alt="Tuco, mid-bath under a mound of suds, leveling a revolver at an intruder in The Good, the Bad and the Ugly."
+         loading="lazy">
+    <figcaption>&ldquo;When you have to shoot, shoot. Don&rsquo;t talk.&rdquo; &mdash; Tuco, <em>The Good, the Bad and the Ugly</em> (1966)</figcaption>
+  </figure>
+
+  <p>Both legs are lame, and it&rsquo;s worth being slow about why, because the way each one fails is different.</p>
+
+  <p>The first premise is a smuggling operation. Scarcity is real &mdash; the universe genuinely runs down, and Book 3 is <em>about</em> that running-down &mdash; but ultimate scarcity bills you in something like 10<sup>100</sup> years, and the trigger gets pulled tonight. To make scarcity bite <em>now</em>, you need appetite that compounds faster than light can feed it: the volume you can reach grows like the cube of the time, and demand, if it runs away, grows like <em>e</em> to the time, and the exponential wins every round it plays. Fine. But an appetite that compounds forever is a <em>choice</em> a civilization makes, not a law it obeys. Strip the costume off premise one and it&rsquo;s a behavioral assumption standing in a physics coat two sizes too big.</p>
+
+  <p>The second premise breaks on what the goods actually are. The thing a grown civilization is short of isn&rsquo;t matter &mdash; it&rsquo;s negentropy and information, and information is the one good that doesn&rsquo;t divide when you share it. I can hand you my proof, my reactor, my trick for lifting a star, and walk away still holding every bit of it. The scarce good and the <em>important</em> good come apart, and the instant they do, symbiosis is back on the table: two civilizations that swap what they know both leave ahead. So &mdash; no. Not necessarily zero-sum.</p>
+
+  <p>Here a lesser critic spikes the ball. Two premises, two corpses, thesis refuted, and off to lunch feeling clever.</p>
+
+  <p>That critic is about to get shot, and it serves him right.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>Because the Dark Forest doesn&rsquo;t actually <em>need</em> zero-sum &mdash; and this is the part Liu himself seems to have walked straight past, which is why the idea is so much better than the packaging it came in.</p>
+
+  <p>Throw both premises out. Give me a positive-sum universe, endless resources, gains from trade lying around like windfall apples. Now grant three things, all of them true, none of them economic. You can&rsquo;t verify another civilization&rsquo;s intentions across the light-cone &mdash; a signal reaches you years or millennia stale, with no way to read the mind that sent it. Mistaking a hostile for a friend isn&rsquo;t a bruise, it&rsquo;s extinction. And capability won&rsquo;t hold still: this century&rsquo;s harmless neighbor is, by Liu&rsquo;s own technological explosion, next century&rsquo;s executioner.</p>
+
+  <p>On those three alone, striking still dominates &mdash; even in a universe with no scarcity anywhere in it. This was never a game of Go Fish. It&rsquo;s a game of Werewolf. What you win by trusting is bounded and, crucially, you live to spend it; what you lose by trusting wrong is unbounded and final. When one branch of the tree ends the game forever, you don&rsquo;t play the average, you play the floor. Minimax. You shoot.<sup class="fn-ref"><a href="#fn2" id="fnref2" role="doc-noteref">2</a></sup></p>
+
+  <p>So the teeth of the Dark Forest were never in the payoff matrix at all. They&rsquo;re in the inaccessibility of <em>intent</em> &mdash; the one thing the dark won&rsquo;t let you see. Liu aimed the whole apparatus at the economics and buried his best argument under it. The economics is exactly where the clever critics will aim, and they&rsquo;ll land, and it will not matter in the slightest, because the real gun is bolted somewhere else entirely.</p>
+
+  <p>I&rsquo;d love to stop here, having quietly improved a man&rsquo;s argument for him and taken a small bow. I can&rsquo;t, because he goes on to destroy it himself, with his own most famous invention.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>The whole ruin argument hangs on a single word: you cannot <em>verify</em> intent. But verifiability isn&rsquo;t a constant of nature. It&rsquo;s a technology &mdash; and the trilogy is fifteen hundred pages of that technology getting better. The sophons are proton-sized computers Trisolaris folds into being and scatters across Earth to watch every laboratory on the planet, undetected, in real time. Liu introduces them as an instrument of domination. What he doesn&rsquo;t appear to notice is that he has just disproved the axiom holding his own theorem up.</p>
+
+  <p>Because if a sufficiently advanced civilization can plant an undetectable watcher inside another one &mdash; and the sophons insist it can &mdash; then intent is no longer inaccessible. And the moment intent becomes checkable, the grown-up equilibrium isn&rsquo;t the dark forest. It&rsquo;s the lit one.</p>
+
+  <p>The sleight of hand is that &ldquo;surveillance&rdquo; is two different animals wearing one word. Espionage is one-way, hidden, and hunting for a reason to defect. Verification is mutual, disclosed, and hunting to confirm a promise &mdash; <em>I let you watch me precisely so you can see I&rsquo;m not the thing you&rsquo;re afraid of.</em> Same sensors. Opposite games. We already ran the experiment, down here, and called it arms control: nobody trusted the other side of the Cold War, they trusted the inspectors, and the inspection regime <em>was</em> the relationship. Everyone quotes &ldquo;trust but verify&rdquo; and forgets the operative word is the second one &mdash; and that Reagan was reciting a Russian proverb <em>at</em> the Russians, at every summit, precisely because trust was the one thing not on offer.<sup class="fn-ref"><a href="#fn3" id="fnref3" role="doc-noteref">3</a></sup></p>
+
+  <p>So run the inaccessibility program forwards instead of backwards. Book 1&rsquo;s horizon tells you what an observer cannot <em>know</em>. Verification is the civilizational engineering that <em>raises that floor</em> &mdash; that buys back the accessibility the light-cone charged you for by default. Make intent transparent enough and you take the <em>mis-</em> out of misjudgment-extinction; the unbounded downside shrinks to something you could insure. Trade reopens. The forest fills with light and nobody fires, because everybody can see that nobody&rsquo;s reaching.</p>
+
+  <p>Liu had the device that dissolves his own dilemma sitting in his hand for two books, and used it to commit murder.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>Now for the weapon he&rsquo;d throw back at me, because he&rsquo;d be within his rights to. The dark forest, he&rsquo;d say, is <em>enforced</em> &mdash; by the dimensional strike, the two-dimensional foil that folds a whole solar system flat as a pressed flower. And deterrence only holds while the retaliator&rsquo;s nerve holds, and the trilogy is nothing if not clear that nerve does not hold. So even a lit, watchful forest rots back into a killing one the first time somebody flinches.</p>
+
+  <p>Except the weapon refutes <em>him</em>, too, and this is my favourite thing in all three books, because he built the refutation into the physics and didn&rsquo;t so much as blink.</p>
+
+  <p>A dimensional strike isn&rsquo;t a missile. It&rsquo;s a change to the <em>vacuum</em> &mdash; and a vacuum has no edge. A true-vacuum bubble doesn&rsquo;t stop politely at the enemy&rsquo;s heliopause to check documents; it spreads, plausibly at lightspeed, flattening three-space into two behind it as it goes. Which means whoever fires it is standing <em>inside</em> the vacuum they just made unstable. Pull the trigger and the barrel turns out to be the universe, and you&rsquo;re down the barrel with everyone else. That isn&rsquo;t deterrence-as-policy. That&rsquo;s mutually assured destruction poured into the foundations &mdash; a retaliator with no nerve left to lose, because the physics keeps the promise for you.</p>
+
+  <p>And it ratchets. Three dimensions to two, two to one, and here&rsquo;s what everyone sails past: there&rsquo;s no floor in the <em>physics</em>. Nothing in the equations forbids a one-dimensional universe. What forbids it is that under three dimensions there are no stable orbits, no stable atoms, no chemistry, and therefore no <em>players</em>.<sup class="fn-ref"><a href="#fn4" id="fnref4" role="doc-noteref">4</a></sup> &ldquo;Habitable&rdquo; and &ldquo;at least three-dimensional&rdquo; turn out to be the same word. The floor isn&rsquo;t where the field gives out. It&rsquo;s where <em>strategy</em> gives out, because there&rsquo;s no longer anybody left to have one.</p>
+
+  <p>Put the two together and the fork shuts on both sides. If the strike is unbounded, it&rsquo;s suicide by propagation &mdash; you go down with the shot. If somehow it&rsquo;s bounded, then every strike is a payment toward a cosmos with no livable dimension left for <em>anyone</em> &mdash; a tragedy of the commons in which the commons is the shape of space itself. There is no third door, the one where you shoot, live, and stroll out onto the cleared ground. Liu needed that door. The physics doesn&rsquo;t build it. His own weapon sits down at the table and eats his own game, slowly, in front of him.</p>
+
+  <p>Which turns the Fermi paradox inside out on the spot.</p>
+
+  <p class="pull">A sky that is still three-dimensional is evidence the gun has never been fired.</p>
+
+  <p>The dark forest isn&rsquo;t the state of the universe. It&rsquo;s the strategy of the civilizations that haven&rsquo;t finished the sum yet.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>So what <em>is</em> out there, if not hunters?</p>
+
+  <p>If shooting is suicide and verification can be built, then cooperation stops being the nice option and becomes the <em>winning</em> one. A federation pools its negentropy, shares what it knows, and compounds its technology on a steeper curve than any lone hider will ever manage. That&rsquo;s a positive growth exponent racing a flat one, and exponents don&rsquo;t tie &mdash; over the long haul a cooperating cluster doesn&rsquo;t nose ahead, it laps the field, by margins that make the finish a formality. Silence and paranoia are locally shrewd and globally <em>slow</em>. One stable federation has to catch just once, and it takes the sky.</p>
+
+  <p>Which flips Fermi a second time, and this is the reading I&rsquo;d actually put my name on. The grown sky isn&rsquo;t silent and it isn&rsquo;t flat. It&rsquo;s <em>organized</em> &mdash; and we don&rsquo;t hear it because we&rsquo;re outside the room, not because we&rsquo;re the last ones breathing in it. Pre-contact, not post-annihilation. Same empty sky, opposite diagnosis, and mine is the one with an equilibrium that lasts, because the verified peace is the attractor and the trigger-happy forest is only the corridor you cross to reach it. You might spend an age in a galactic cold war on the way &mdash; armed, watchful, MAD scaled up to stars &mdash; but a cold war held stable by a weapon nobody can fire without erasing themselves is a waiting room, not a grave.</p>
+
+  <p>I want to believe that. I half do. My liege-wife, who has read more of my optimism than any human should be asked to, put down the draft here and said it sounds like a man talking himself into something. She&rsquo;s right, as usual. Here&rsquo;s the half that keeps me honest.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p>A federation can only die from the inside. No outside hunter can take it &mdash; that was the entire point of building it. So the question worth asking isn&rsquo;t <em>who shoots it</em>. It&rsquo;s <em>how it rots</em>.</p>
+
+  <p>And the rot is baked into the cure. A federation runs on verification; verification runs on sensors you can&rsquo;t spoof. But a civilization that can fold a proton can absolutely forge a sensor feed. The very unspoofability that made the <em>outside</em> safe turns into a knife the moment it&rsquo;s held by a member <em>inside</em> the fence &mdash; one forged channel, one counterparty who&rsquo;s learned to show you the reading you wanted, and the trust-mesh that made everyone strong is now the softest target in the galaxy. Federations don&rsquo;t fall to invasion. They fall to a mole. The more trust the machine runs on, the fatter the bounty on the one lie it can&rsquo;t catch.<sup class="fn-ref"><a href="#fn5" id="fnref5" role="doc-noteref">5</a></sup></p>
+
+  <p>Liu, to his credit, saw a cousin of this. His version is that the temperament a long peace selects <em>for</em> &mdash; the empathy, the flinch away from the button &mdash; is exactly the temperament that fails at the one instant the button has to be pushed. Success breeds out the capacity to defend success. Both failures are the same shape, and it&rsquo;s a shape you already know from every institution you&rsquo;ve ever watched go soft: it works beautifully right up until the thing it optimized away is the exact thing it suddenly, mortally needs.</p>
+
+  <p>Which is where this lands, and where it began. The enemy was never the forest. It was entropy &mdash; the ordinary, social, unglamorous kind. A trust-mesh is a low-entropy state, dear to build and a little cheaper every year to let slide, and the only real question a federation ever faces is whether it can keep paying maintenance on its own order faster than that order runs down from within. Which is, you will notice, the same question a Loschmidt footnote asked me two essays and one apology ago, and the reason little old humble me started writing any of this down in the first place.</p>
+
+  <p>The dark forest is what a universe looks like at maximum mutual inaccessibility. Trust is the engineering that lowers it. Entropy is the tax on the engineering, and the tax always gets collected. Liu wrote the failure mode and mistook it for physics. The exit was in his hand the whole time &mdash; it just cost more to hold the door open than to let it swing shut, and doors, like civilizations, mostly swing shut.</p>
+
+  <p>Same word at both ends, like I promised. Inaccessibility. Book 1 said it&rsquo;s what you can&rsquo;t <em>know</em>. Book 2 says it&rsquo;s what you can&rsquo;t <em>do</em> without unmaking the very thing that does the doing. Book 3 is next &mdash; and there, at long last, Liu gets the dimensions <em>right</em>.</p>
+
+  <p class="signoff">Entropically yours,<br>&mdash;I.W.</p>
+
+  <div class="section-dinkus">&mdash; &#x25C6; &mdash;</div>
+
+  <p class="bio">Dr. Ira Wolfson is a physicist at Braude College of Engineering. He works on thermodynamics, Bayesian epistemology, and the philosophy of science, and the Loschmidt piece that started all of this is <a href="cats_time_lords.html">here</a>.</p>
+
+  <aside class="endnotes" role="doc-endnotes">
+    <div class="endnotes-label">Footnotes</div>
+    <ol>
+      <li id="fn1">You get the blue ribbon for surviving it.<a href="#fnref1" class="fn-back" role="doc-backlink" aria-label="Back to reference 1">&#8617;&#xFE0E;</a></li>
+      <li id="fn2">The formal name is a ruin problem, and gamblers understand it better than diplomats ever have: no edge is worth a bet that can zero you, because zero is absorbing &mdash; you don&rsquo;t get a next round in which to regress to the mean. A civilization is a bankroll that&rsquo;s only dealt one hand.<a href="#fnref2" class="fn-back" role="doc-backlink" aria-label="Back to reference 2">&#8617;&#xFE0E;</a></li>
+      <li id="fn3"><em>Doveryai, no proveryai.</em> Reagan loved the line so much he trotted it out at nearly every summit, until Gorbachev finally snapped that he said it <em>every single time</em>. The proverb was doing more philosophical work than either man signed up for.<a href="#fnref3" class="fn-back" role="doc-backlink" aria-label="Back to reference 3">&#8617;&#xFE0E;</a></li>
+      <li id="fn4">Ehrenfest&rsquo;s old observation, dressed for a party: inverse-square forces only close into stable orbits in exactly three spatial dimensions. In two, the planets either spiral in or fly off, and the atom won&rsquo;t hold together either. A two-dimensional civilization isn&rsquo;t a flattened civilization. It&rsquo;s an obituary with nobody left to read it.<a href="#fnref4" class="fn-back" role="doc-backlink" aria-label="Back to reference 4">&#8617;&#xFE0E;</a></li>
+      <li id="fn5">If that sounds less like galactic politics and more like why your bank spends more vetting the clerk who <em>can</em> move the money than reinforcing the wall around the building &mdash; yes. The call is coming from inside the house. It almost always is.<a href="#fnref5" class="fn-back" role="doc-backlink" aria-label="Back to reference 5">&#8617;&#xFE0E;</a></li>
+    </ol>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2026 Ira Wolfson
+</footer>
+
+<script>
+(function(){
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap';
+  document.head.appendChild(l);
+})();
+</script>
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" defer src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
