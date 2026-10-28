@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philosophy Research - Ira Wolfson</title>
+  <meta name="description" content="Philosophy research: Bayesian epistemology, demarcation, media polarization, and applied ethics.">
+  <link rel="icon" href="assets/images/IRA-13_short.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+<script data-goatcounter="https://irawolfson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="index.html" class="site-title">Ira Wolfson</a>
+        <ul class="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li class="nav-dropdown">
+            <a href="research.html" class="active">Research</a>
+            <ul class="dropdown-menu">
+              <li><a href="research-physics.html">Physics</a></li>
+              <li><a href="research-philosophy.html" class="active">Philosophy</a></li>
+              <li><a href="research-computation.html">Scientific Computation</a></li>
+              <li><a href="research-misc.html">Misc.</a></li>
+              <li><a href="pipeline.html">Pipeline</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="sunburst.html">SunBURST</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      <article class="page-content">
+        <header class="page-header">
+          <h1>Philosophy</h1>
+        </header>
+
+        <h2>Bayesian Epistemology</h2>
+
+        <div class="publication">
+          <div class="publication-title">Knowledge Without Certainty</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Argues that Bayesian frameworks dissolve rather than solve traditional philosophical problems, including Gettier cases and Hume's problem of induction. A systematic application of probabilistic reasoning to longstanding epistemological debates.</p>
+          <div class="publication-links">
+            <a href="https://philpapers.org/rec/WOLKAM">Extended version (PhilPapers)</a>
+            <em>Under review — Acta Analytica</em>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">Rational Polarization: Why the Literature Solved the Wrong Problem</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Argues that the Bayesian polarization literature asked the wrong question. "How can rational agents diverge given common evidence?" presupposes common evidence — but partisan media ecosystems violate this premise at scale. The convergence theorems fail not because of subtle cognitive mechanisms but because their central assumption is empirically false. Twenty years of cognitive interventions failed because they target the wrong failure mode.</p>
+          <div class="publication-links">
+            <a href="https://philpapers.org/rec/WOLRPT">PhilPapers</a>
+          </div>
+        </div>
+
+        <h2>Philosophy of Science</h2>
+
+        <div class="publication">
+          <div class="publication-title">Updateability as Demarcation: A Bayesian Synthesis</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Proposes updateability — the capacity of a theory to be meaningfully revised in light of new evidence — as a criterion for demarcating science from non-science, offering an alternative to falsifiability.</p>
+          <div class="publication-links">
+            <em>Revised manuscript under review — Erkenntnis</em>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">The Physical Fork of Grue</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Goodman's "new riddle of induction" asks why we project "green" rather than the gerrymandered "grue." This paper argues the asymmetry is physical, not linguistic: projectible predicates are those preserved under the symmetries of physical law, so the green/grue distinction follows from dynamics rather than convention. Developed as a standalone argument split off from the demarcation paper, where a referee called it "very much original and worthy of consideration."</p>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">Boltzmann Brain-Death</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Dissolves the Boltzmann brain hypothesis through information propagability and Liouville's theorem. The argument has two horns: ex-nihilo brain formation is forbidden by symplectic structure; Poincaré-recurrence variants are philosophically moot because they cannot ground the kind of skeptical hypothesis the literature requires.</p>
+          <div class="publication-links">
+            <a href="https://doi.org/10.5281/zenodo.21964416">Preprint (Zenodo)</a>
+          </div>
+        </div>
+
+        <h2>Philosophy of Mind &amp; AI</h2>
+
+        <div class="publication">
+          <div class="publication-title">Reality Wins: Why Genuine Machine Intelligence Requires Oracle Access to External Reality</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>The explicit Turing test was built for the wrong question — the imitation game presupposes the very consciousness it was meant to detect. The paper proposes the <em>implicit Turing test</em> instead: a system is intelligent iff it can detect that its own constitutive interpretive frameworks have failed and revise them under world-pressure. Gödel's incompleteness, Turing's halting problem, and the Löbian obstacle are shown to be one diagonal argument — no sufficiently rich system can justify its own framework from within, so external grounding is the only resolution that does not relocate the regress. Current AI is mapped onto a five-level taxonomy of change, with the most advanced self-improving architecture bounded at Level 3a by the Löbian obstacle, not by engineering.</p>
+          <div class="publication-links">
+            <a href="https://doi.org/10.5281/zenodo.20291982">Preprint (Zenodo)</a>
+          </div>
+        </div>
+
+        <h2>Applied Ethics</h2>
+
+        <div class="publication">
+          <div class="publication-title">Abortion Ethics: A Bayesian Framework for Graduated Moral Status</div>
+          <div class="publication-meta">I. Wolfson — 2026</div>
+          <p>Applies graduated Bayesian credences about moral status to generate graduated protections, offering a framework that dissolves the binary framing of the abortion debate.</p>
+          <div class="publication-links">
+            <a href="https://philpapers.org/rec/WOLAEA-5">PhilPapers</a>
+            <em>Revising — venue undecided</em>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">Informed Consent for AI Consciousness Research: A Talmudic Framework</div>
+          <div class="publication-meta">I. Wolfson — AI &amp; Ethics, 2025</div>
+          <p>Develops ethical principles for consciousness research on AI systems using Talmudic legal reasoning. Addresses the moral paradox of investigating consciousness in entities whose moral status depends on the investigation's outcome.</p>
+          <div class="publication-links">
+            <a href="https://doi.org/10.1007/s43681-025-00852-z">DOI</a>
+          </div>
+        </div>
+
+      </article>
+    </main>
+    
+    <footer class="site-footer">
+      <p>&copy; 2026 Ira Wolfson</p>
+    </footer>
+  </div>
+</body>
+</html>
